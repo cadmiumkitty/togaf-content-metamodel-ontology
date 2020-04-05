@@ -12,10 +12,4 @@ A regulatory impact analysis solution based on the ontology was presented at the
 
 ## Immediate Next Steps
 
- 1. Address [issues](https://github.com/cadmiumkitty/togaf-content-metamodel-ontology/issues) of the original ontology
- 1. Add `category` property from TOGAF Content Metamodel linking to [SKOS](https://www.w3.org/2004/02/skos/)
- 1. Add or switch to Turtle serialization
- 1. Clean up versioning 
- 1. Put the ontology through the release process (logical consistency checks, RDFUnit, etc.)
- 1. Add [Semantic MediaWiki](https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki) mapping
- 1. Find future home with a working group and regular releases behind the ontology to increase adoption
+Ontology needs to be upgraded to support TOGAF 9.2 with added `category` links to SKOS and `decomposition`. We'd also like to include SKOS version of the concepts and add [Semantic MediaWiki](https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki) mappings.

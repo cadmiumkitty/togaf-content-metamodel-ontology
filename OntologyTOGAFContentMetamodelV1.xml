@@ -1810,9 +1810,9 @@ Processes represent a sequence of activities that together achieve a specified o
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2010/0/OntologyTOGAFContentMetamodel.owl#TechnologyArchitecfture -->
+    <!-- http://www.semanticweb.org/ontologies/2010/0/OntologyTOGAFContentMetamodel.owl#TechnologyArchitecture -->
 
-    <owl:Class rdf:about="#TechnologyArchitecfture">
+    <owl:Class rdf:about="#TechnologyArchitecture">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1939,7 +1939,7 @@ Processes represent a sequence of activities that together achieve a specified o
             <rdf:Description rdf:about="#ApplicationArchitecture"/>
             <rdf:Description rdf:about="#BusinessArchitecture"/>
             <rdf:Description rdf:about="#DataArchitecture"/>
-            <rdf:Description rdf:about="#TechnologyArchitecfture"/>
+            <rdf:Description rdf:about="#TechnologyArchitecture"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
