@@ -1,0 +1,3057 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:togaf="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl">
+        <owl:priorVersion rdf:resource="http://www.semanticweb.org/ontologies/2010/0/OntologyTOGAFContentMetamodel.owl"/>
+        <owl:versionInfo xml:lang="en">This is version 2.0 of the TOGAF Content Metamodel ontology. It is based on the Content Metamodel of the TOGAF Version 9.2 standard. See https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap30.html for the complete set of entities, attributes and relationships.</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorBelongsToOrganizationUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorBelongsToOrganizationUnit">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitContainsActor"/>
+        <rdfs:label>belongs to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorConsumesBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorConsumesBusinessService">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsProvidedToActor"/>
+        <rdfs:label>consumes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorDecomposesActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorDecomposesActor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorIsDecomposedByActor"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorGeneratesAndOrResolvesEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorGeneratesAndOrResolvesEvent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#eventIsGeneratedAndOrResolvedByActor"/>
+        <rdfs:label>generates and/or resolves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorIsDecomposedByActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorIsDecomposedByActor">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorPerformsAndOrInteractsWithFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorPerformsAndOrInteractsWithFunction">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsPerformedByAndOrSupportsActor"/>
+        <rdfs:label>performs and/or interacts with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorPerformsTaskInRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorPerformsTaskInRole">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#roleIsPerformedByActor"/>
+        <rdfs:label>performs task in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorSuppliesOrConsumesDataEntity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorSuppliesOrConsumesDataEntity">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsSuppliedOrConsumedByActor"/>
+        <rdfs:label>supplies/consumes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorTriggersAndOrParticipatesInValueStream -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorTriggersAndOrParticipatesInValueStream">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsTriggeredByAndOrInvolvesActor"/>
+        <rdfs:label>triggers and/or participates in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#associatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#associatedWith">
+        <rdfs:label>associated with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityDecomposesBusinessCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityDecomposesBusinessCapability">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsDecomposedByBusinessCapability"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityEnablesValueStream -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityEnablesValueStream">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsEnabledByBusinessCapability"/>
+        <rdfs:label>enables</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsDecomposedByBusinessCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsDecomposedByBusinessCapability">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsDeliveredByFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsDeliveredByFunction">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionDeliversBusinessCapability"/>
+        <rdfs:label>is delivered by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsInfluencedByCourseOfAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsInfluencedByCourseOfAction">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionInfluencesBusinessCapability"/>
+        <rdfs:label>is influenced by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsOperationalizedByProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsOperationalizedByProcess">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processOperationalizesBusinessCapability"/>
+        <rdfs:label>is operationalized by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsUsedByOrganizationUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsUsedByOrganizationUnit">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitUsesBusinessCapability"/>
+        <rdfs:label>is used by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceConsumesBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceConsumesBusinessService">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsConsumedByBusinessService"/>
+        <rdfs:label>consumes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceDecomposesBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceDecomposesBusinessService">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsDecomposedByBusinessService"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsConsumedByBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsConsumedByBusinessService">
+        <rdfs:label>is consumed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsDecomposedByBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsDecomposedByBusinessService">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsGovernedAndMeasuredByContract -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsGovernedAndMeasuredByContract">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#contractGovernsAndMeasuresBusinessService"/>
+        <rdfs:label>is governed and measured by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsImplementedOnLogicalTechnologyComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsImplementedOnLogicalTechnologyComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentProvidesPlatformForBusinessService"/>
+        <rdfs:label>is implemented on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsOwnedAndGovernedByOrganizationUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsOwnedAndGovernedByOrganizationUnit">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitOwnsAndGovernsBusinessService"/>
+        <rdfs:label>is owned and governed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsProvidedToActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsProvidedToActor">
+        <rdfs:label>is provided to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsRealizedByAndOrSupportsProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsRealizedByAndOrSupportsProcess">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processDecomposesAndOrOrchestratesBusinessService"/>
+        <rdfs:label>is realized by and/or supports</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsRealizedThroughInformationSystemService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsRealizedThroughInformationSystemService">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceRealizesBusinessService"/>
+        <rdfs:label>is realized through</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsRealizedThroughLogicalApplicationComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsRealizedThroughLogicalApplicationComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentImplementsBusinessService"/>
+        <rdfs:label>is realized through</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsTrackedAgainstMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsTrackedAgainstMeasure">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureSetsPerformanceCriteriaForBusinessService"/>
+        <rdfs:label>is tracked against</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceMeetsServiceQuality -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceMeetsServiceQuality">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#serviceQualityAppliesToBusinessService"/>
+        <rdfs:label>meets</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceProvidesAndOrConsumesDataEntity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceProvidesAndOrConsumesDataEntity">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsAccessedAndUpdatedThroughBusinessService"/>
+        <rdfs:label>provides and/or consumes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceProvidesGovernedInterfaceToAccessFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceProvidesGovernedInterfaceToAccessFunction">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsBoundedByBusinessService"/>
+        <rdfs:label>provides governed interface to access</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceResolvesEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceResolvesEvent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#eventIsResolvedByBusinessService"/>
+        <rdfs:label>resolves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#capabilityIsDeliveredByWorkPackage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#capabilityIsDeliveredByWorkPackage">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#workPackageDeliversCapability"/>
+        <rdfs:label>is delivered by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#category -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#category">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+        <rdfs:comment>User-definable categorization taxonomy for each metamodel entity.</rdfs:comment>
+        <rdfs:label>category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#contractGovernsAndMeasuresBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#contractGovernsAndMeasuresBusinessService">
+        <rdfs:label>governs and measures</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#contractMeetsServiceQuality -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#contractMeetsServiceQuality">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#serviceQualityAppliesToContract"/>
+        <rdfs:label>meets</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#controlEnsuresCorrectOperationOfProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#controlEnsuresCorrectOperationOfProcess">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processIsGuidedByControl"/>
+        <rdfs:label>ensures correct operation of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionInfluencesBusinessCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionInfluencesBusinessCapability">
+        <rdfs:label>influences</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionInfluencesFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionInfluencesFunction">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsInfluencedByCourseOfAction"/>
+        <rdfs:label>influences</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionInfluencesValueStream -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionInfluencesValueStream">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsInfluencedByCourseOfAction"/>
+        <rdfs:label>influences</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionRealizesGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionRealizesGoal">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsRealizedByCourseOfAction"/>
+        <rdfs:label>realizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityDecomposesDataEntity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityDecomposesDataEntity">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsDecomposedByDataEntity"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsAccessedAndUpdatedThroughBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsAccessedAndUpdatedThroughBusinessService">
+        <rdfs:label>is accessed and updated through</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsDecomposedByDataEntity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsDecomposedByDataEntity">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsSuppliedOrConsumedByActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsSuppliedOrConsumedByActor">
+        <rdfs:label>is supplied/consumed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityRelatesToDataEntity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityRelatesToDataEntity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label>relates to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityResidesWithinLogicalDataComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityResidesWithinLogicalDataComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalDataComponentEncapsulatesDataEntity"/>
+        <rdfs:label>resides within</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityUsesInformationSystemService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityUsesInformationSystemService">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceIsUsedByDataEntity"/>
+        <rdfs:label>uses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverCreatesGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverCreatesGoal">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalAddressesDriver"/>
+        <rdfs:label>creates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverDecomposesDriver -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverDecomposesDriver">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverIsDecomposedByDriver"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverIsDecomposedByDriver -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverIsDecomposedByDriver">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverMotivatesOrganizationUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverMotivatesOrganizationUnit">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitIsMotivatedByDriver"/>
+        <rdfs:label>motivates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#eventIsGeneratedAndOrResolvedByActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#eventIsGeneratedAndOrResolvedByActor">
+        <rdfs:label>is generated and/or resolved by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#eventIsResolvedAndOrGeneratedByProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#eventIsResolvedAndOrGeneratedByProcess">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processResolvesAndOrGeneratesEvent"/>
+        <rdfs:label>is resolved and/or generated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#eventIsResolvedByBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#eventIsResolvedByBusinessService">
+        <rdfs:label>is resolved by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionCommunicatesWithFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionCommunicatesWithFunction">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label>communicates with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionDecomposesFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionDecomposesFunction">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsDecomposedByFunction"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionDeliversBusinessCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionDeliversBusinessCapability">
+        <rdfs:label>delivers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsBoundedByBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsBoundedByBusinessService">
+        <rdfs:label>is bounded by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsDecomposedByFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsDecomposedByFunction">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsInfluencedByCourseOfAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsInfluencedByCourseOfAction">
+        <rdfs:label>is influenced by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsOwnedByOrganizationUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsOwnedByOrganizationUnit">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitOwnsFunction"/>
+        <rdfs:label>is owned by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsPerformedByAndOrSupportsActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsPerformedByAndOrSupportsActor">
+        <rdfs:label>is performed by and/or supports</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsRealizedByAndOrSupportsProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsRealizedByAndOrSupportsProcess">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processDecomposesAndOrOrchestratesFunction"/>
+        <rdfs:label>is realized by and/or supports</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalAddressesDriver -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalAddressesDriver">
+        <rdfs:label>addresses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalDecomposesGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalDecomposesGoal">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsDecomposedByGoal"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsDecomposedByGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsDecomposedByGoal">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsRealizedByCourseOfAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsRealizedByCourseOfAction">
+        <rdfs:label>is realized by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsRealizedThroughObjective -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsRealizedThroughObjective">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveRealizesGoal"/>
+        <rdfs:label>is realized through</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent">
+        <rdfs:label>has component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceIsRealizedThroughLogicalApplicationComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceIsRealizedThroughLogicalApplicationComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentImplementsInformationSystemService"/>
+        <rdfs:label>is realized through</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceIsServedByTechnologyService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceIsServedByTechnologyService">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#technologyServiceServesInformationSystemService"/>
+        <rdfs:label>is served by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceIsUsedByDataEntity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceIsUsedByDataEntity">
+        <rdfs:label>is used by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceRealizesBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceRealizesBusinessService">
+        <rdfs:label>realizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentCommunicatesWithLogicalApplicationComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentCommunicatesWithLogicalApplicationComponent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label>communicates with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentDecomposesLogicalApplicationComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentDecomposesLogicalApplicationComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsDecomposedByLogicalApplicationComponent"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentImplementsBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentImplementsBusinessService">
+        <rdfs:label>implements</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentImplementsInformationSystemService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentImplementsInformationSystemService">
+        <rdfs:label>implements</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsDecomposedByLogicalApplicationComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsDecomposedByLogicalApplicationComponent">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsRealizedByPhysicalApplicationComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsRealizedByPhysicalApplicationComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentRealizesLogicalApplicationComponent"/>
+        <rdfs:label>is realized by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsServedByLogicalTechnologyComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsServedByLogicalTechnologyComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentServesLogicalApplicationComponent"/>
+        <rdfs:label>is served by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsUsedByLogicalDataComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsUsedByLogicalDataComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalDataComponentUsesLogicalApplicationComponent"/>
+        <rdfs:label>is used by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalDataComponentEncapsulatesDataEntity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalDataComponentEncapsulatesDataEntity">
+        <rdfs:label>encapsulates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalDataComponentIsRealizedByPhysicalDataComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalDataComponentIsRealizedByPhysicalDataComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentRealizesLogicalDataComponent"/>
+        <rdfs:label>is realized by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalDataComponentUsesLogicalApplicationComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalDataComponentUsesLogicalApplicationComponent">
+        <rdfs:label>uses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentDecomposesLogicalTechnologyComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentDecomposesLogicalTechnologyComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentIsDecomposedByLogicalTechnologyComponent"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentIsDecomposedByLogicalTechnologyComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentIsDecomposedByLogicalTechnologyComponent">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentIsDependentOnLogicalTechnologyComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentIsDependentOnLogicalTechnologyComponent">
+        <rdfs:label>is dependent on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentIsRealizedByPhysicalTechnologyComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentIsRealizedByPhysicalTechnologyComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentRealizesLogicalTechnologyComponent"/>
+        <rdfs:label>is realized by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentProvidesPlatformForBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentProvidesPlatformForBusinessService">
+        <rdfs:label>provides platform for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentServesLogicalApplicationComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentServesLogicalApplicationComponent">
+        <rdfs:label>serves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentSuppliesTechnologyService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentSuppliesTechnologyService">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#technologyServiceIsSuppliedByLogicalTechnologyComponent"/>
+        <rdfs:label>supplies</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureDecomposesMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureDecomposesMeasure">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureIsDecomposedByMeasure"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureIsDecomposedByMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureIsDecomposedByMeasure">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureSetsPerformanceCriteriaForBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureSetsPerformanceCriteriaForBusinessService">
+        <rdfs:label>sets performance criteria for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureSetsPerformanceCriteriaForObjective -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureSetsPerformanceCriteriaForObjective">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveIsTrackedAgainstMeasure"/>
+        <rdfs:label>sets performance criteria for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveDecomposesObjective -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveDecomposesObjective">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveIsDecomposedByObjective"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveIsDecomposedByObjective -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveIsDecomposedByObjective">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveIsTrackedAgainstMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveIsTrackedAgainstMeasure">
+        <rdfs:label>is tracked against</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveRealizesGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveRealizesGoal">
+        <rdfs:label>realizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitContainsActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitContainsActor">
+        <rdfs:label>contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitDecomposesOrganizationUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitDecomposesOrganizationUnit">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitIsDecomposedByOrganizationUnit"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitInvolvesProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitInvolvesProcess">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processInvolvesOrganizationUnit"/>
+        <rdfs:label>involves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitIsDecomposedByOrganizationUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitIsDecomposedByOrganizationUnit">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitIsMotivatedByDriver -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitIsMotivatedByDriver">
+        <rdfs:label>is motivated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitOwnsAndGovernsBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitOwnsAndGovernsBusinessService">
+        <rdfs:label>owns and governs</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitOwnsFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitOwnsFunction">
+        <rdfs:label>owns</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitProducesProduct -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitProducesProduct">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#productIsProducedByOrganizationUnit"/>
+        <rdfs:label>produces</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitUsesBusinessCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitUsesBusinessCapability">
+        <rdfs:label>uses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentCommunicatesWithPhysicalApplicationComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentCommunicatesWithPhysicalApplicationComponent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label>communicates with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentDecomposesPhysicalApplicationComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentDecomposesPhysicalApplicationComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentIsDecomposedByPhysicalApplicationComponent"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentIsDecomposedByPhysicalApplicationComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentIsDecomposedByPhysicalApplicationComponent">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentIsServedByPhysicalTechnologyComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentIsServedByPhysicalTechnologyComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentServesPhysicalApplicationComponent"/>
+        <rdfs:label>is served by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentIsUsedByPhysicalDataComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentIsUsedByPhysicalDataComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentUsesPhysicalApplicationComponent"/>
+        <rdfs:label>is used by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentRealizesLogicalApplicationComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentRealizesLogicalApplicationComponent">
+        <rdfs:label>realizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentDecomposesPhysicalDataComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentDecomposesPhysicalDataComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentIsDecomposedByPhysicalDataComponent"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentIsDecomposedByPhysicalDataComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentIsDecomposedByPhysicalDataComponent">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentRealizesLogicalDataComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentRealizesLogicalDataComponent">
+        <rdfs:label>realizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentUsesPhysicalApplicationComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentUsesPhysicalApplicationComponent">
+        <rdfs:label>uses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentDecomposesPhysicalTechnologyComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentDecomposesPhysicalTechnologyComponent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentIsDecomposedByPhysicalTechnologyComponent"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentIsDecomposedByPhysicalTechnologyComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentIsDecomposedByPhysicalTechnologyComponent">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentIsDependentOnPhysicalTechnologyComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentIsDependentOnPhysicalTechnologyComponent">
+        <rdfs:label>is dependent on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentRealizesLogicalTechnologyComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentRealizesLogicalTechnologyComponent">
+        <rdfs:label>realizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentServesPhysicalApplicationComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentServesPhysicalApplicationComponent">
+        <rdfs:label>serves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processDecomposesAndOrOrchestratesBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processDecomposesAndOrOrchestratesBusinessService">
+        <rdfs:label>decomposes and/or orchestrates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processDecomposesAndOrOrchestratesFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processDecomposesAndOrOrchestratesFunction">
+        <rdfs:label>decomposes and/or orchestrates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processDecomposesProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processDecomposesProcess">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processIsDecomposedByProcess"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processInvolvesOrganizationUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processInvolvesOrganizationUnit">
+        <rdfs:label>involves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processIsDecomposedByProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processIsDecomposedByProcess">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processIsGuidedByControl -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processIsGuidedByControl">
+        <rdfs:label>is guided by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processIsPerformedByAndOrInvolvesRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processIsPerformedByAndOrInvolvesRole">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#rolePerformsAndOrParticipatesInProcess"/>
+        <rdfs:label>is performed by and/or involves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processOperationalizesBusinessCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processOperationalizesBusinessCapability">
+        <rdfs:label>operationalizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processPrecedesOrFollowsProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processPrecedesOrFollowsProcess">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label>precedes/follows</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processProducesProduct -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processProducesProduct">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#productIsProducedByProcess"/>
+        <rdfs:label>produces</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processResolvesAndOrGeneratesEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processResolvesAndOrGeneratesEvent">
+        <rdfs:label>resolves and/or generates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#productIsProducedByOrganizationUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#productIsProducedByOrganizationUnit">
+        <rdfs:label>is produced by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#productIsProducedByProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#productIsProducedByProcess">
+        <rdfs:label>is produced by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#roleDecomposesRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#roleDecomposesRole">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#roleIsDecomposedByRole"/>
+        <rdfs:label>decomposes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#roleIsDecomposedByRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#roleIsDecomposedByRole">
+        <rdfs:label>is decomposed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#roleIsPerformedByActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#roleIsPerformedByActor">
+        <rdfs:label>is performed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#rolePerformsAndOrParticipatesInProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#rolePerformsAndOrParticipatesInProcess">
+        <rdfs:label>performs and/or participates in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#serviceQualityAppliesToBusinessService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#serviceQualityAppliesToBusinessService">
+        <rdfs:label>applies to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#serviceQualityAppliesToContract -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#serviceQualityAppliesToContract">
+        <rdfs:label>applies to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#technologyServiceIsSuppliedByLogicalTechnologyComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#technologyServiceIsSuppliedByLogicalTechnologyComponent">
+        <rdfs:label>is supplied by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#technologyServiceServesInformationSystemService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#technologyServiceServesInformationSystemService">
+        <rdfs:label>serves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsEnabledByBusinessCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsEnabledByBusinessCapability">
+        <rdfs:label>is enabled by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsInfluencedByCourseOfAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsInfluencedByCourseOfAction">
+        <rdfs:label>is influenced by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsTriggeredByAndOrInvolvesActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsTriggeredByAndOrInvolvesActor">
+        <rdfs:label>is triggered by and/or involves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#workPackageDeliversCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#workPackageDeliversCapability">
+        <rdfs:label>delivers</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorBelongsToOrganizationUnit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorConsumesBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorDecomposesActor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorGeneratesAndOrResolvesEvent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorIsDecomposedByActor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorPerformsAndOrInteractsWithFunction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorPerformsTaskInRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorSuppliesOrConsumesDataEntity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorTriggersAndOrParticipatesInValueStream"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ValueStream"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A person, organization, or system that has a role that initiates or interacts with activities; for example, a sales representative who travels to visit customers. Actors may be internal or external to an organization. In the automotive industry, an original equipment manufacturer would be considered an actor by an automotive dealership that interacts with its supply chain activities.</rdfs:comment>
+        <rdfs:label>Actor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitecture">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Architecture"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitectureComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InformationSystemService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitectureComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitectureComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Architecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Architecture">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#associatedWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#AssociationObjects"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#AssociationObjects -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#AssociationObjects">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#associatedWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Assumption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Assumption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#AssociationObjects"/>
+        <rdfs:comment>A statement of probable fact that has not been fully validated at this stage, due to external constraints. For example, it may be assumed that an existing application will support a certain set of functional requirements, although those requirements may not yet have been individually validated.</rdfs:comment>
+        <rdfs:label>Assumption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitecture">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Architecture"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Contract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Control"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CourseOfAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Driver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Goal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Measure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Objective"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServiceQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ValueStream"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessCapability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessCapability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityDecomposesBusinessCapability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityEnablesValueStream"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ValueStream"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsDecomposedByBusinessCapability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsDeliveredByFunction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsInfluencedByCourseOfAction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CourseOfAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsOperationalizedByProcess"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsUsedByOrganizationUnit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A particular ability that a business may possess or exchange to achieve a particular purpose.</rdfs:comment>
+        <rdfs:label>Business Capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceConsumesBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceDecomposesBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsConsumedByBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsDecomposedByBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsGovernedAndMeasuredByContract"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Contract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsImplementedOnLogicalTechnologyComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalTechnologyComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsOwnedAndGovernedByOrganizationUnit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsProvidedToActor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsRealizedByAndOrSupportsProcess"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsRealizedThroughInformationSystemService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InformationSystemService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsRealizedThroughLogicalApplicationComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsTrackedAgainstMeasure"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Measure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceMeetsServiceQuality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServiceQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceProvidesAndOrConsumesDataEntity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceProvidesGovernedInterfaceToAccessFunction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceResolvesEvent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization.</rdfs:comment>
+        <rdfs:label>Business Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Capability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Capability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#capabilityIsDeliveredByWorkPackage"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#WorkPackage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A business-focused outcome that is delivered by the completion of one or more work packages. Using a capability-based planning approach, change activities can be sequenced and grouped in order to provide continuous and incremental business value.</rdfs:comment>
+        <rdfs:label>Capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Constraint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Constraint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#AssociationObjects"/>
+        <rdfs:comment>An external factor that prevents an organization from pursuing particular approaches to meet its goals. For example, customer data is not harmonized within the organization, regionally or nationally, constraining the organization&apos;s ability to offer effective customer service.</rdfs:comment>
+        <rdfs:label>Constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Contract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Contract">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#GovernanceExtension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#contractGovernsAndMeasuresBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#contractMeetsServiceQuality"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServiceQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An agreement between a service consumer and a service provider that establishes functional and non-functional parameters for interaction.</rdfs:comment>
+        <rdfs:label>Contract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Control -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Control">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ProcessModelingExtension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#controlEnsuresCorrectOperationOfProcess"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A decision-making step with accompanying decision logic used to determine execution approach for a process or to ensure that a process complies with governance criteria. For example, a sign-off control on the purchase request processing process that checks whether the total value of the request is within the sign-off limits of the requester, or whether it needs escalating to higher authority.</rdfs:comment>
+        <rdfs:label>Control</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CourseOfAction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CourseOfAction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionInfluencesBusinessCapability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionInfluencesFunction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionInfluencesValueStream"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ValueStream"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionRealizesGoal"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Goal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Direction and focus provided by strategic goals and objectives, often to deliver the value proposition characterized in the business model.</rdfs:comment>
+        <rdfs:label>Course of Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitecture">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Architecture"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitectureComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalDataComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalDataComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitectureComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitectureComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitectureComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityDecomposesDataEntity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsAccessedAndUpdatedThroughBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsDecomposedByDataEntity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsSuppliedOrConsumedByActor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityRelatesToDataEntity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityResidesWithinLogicalDataComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalDataComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityUsesInformationSystemService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InformationSystemService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations.</rdfs:comment>
+        <rdfs:label>Data Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataModelingExtension -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataModelingExtension">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Driver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Driver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#MotivationExtension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverCreatesGoal"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Goal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverDecomposesDriver"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Driver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverIsDecomposedByDriver"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Driver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverMotivatesOrganizationUnit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An external or internal condition that motivates the organization to define its goals. An example of an external driver is a change in regulation or compliance rules which, for example, require changes to the way an organization operates; i.e., Sarbanes-Oxley in the US.</rdfs:comment>
+        <rdfs:label>Driver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Event">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ProcessModelingExtension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#eventIsGeneratedAndOrResolvedByActor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#eventIsResolvedAndOrGeneratedByProcess"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#eventIsResolvedByBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An organizational state change that triggers processing events; may originate from inside or outside the organization and may be resolved inside or outside the organization.</rdfs:comment>
+        <rdfs:label>Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionCommunicatesWithFunction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionDecomposesFunction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionDeliversBusinessCapability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsBoundedByBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsDecomposedByFunction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsInfluencedByCourseOfAction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CourseOfAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsOwnedByOrganizationUnit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsPerformedByAndOrSupportsActor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsRealizedByAndOrSupportsProcess"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Delivers business capabilities closely aligned to an organization, but not necessarily explicitly governed by the organization. Also referred to as &quot;business function&quot;.</rdfs:comment>
+        <rdfs:label>Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Gap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Gap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#AssociationObjects"/>
+        <rdfs:comment>A statement of difference between two states. Used in the context of gap analysis, where the difference between the Baseline and Target Architecture is identified.</rdfs:comment>
+        <rdfs:label>Gap</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Goal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Goal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#MotivationExtension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalAddressesDriver"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Driver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalDecomposesGoal"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Goal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsDecomposedByGoal"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Goal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsRealizedByCourseOfAction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CourseOfAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsRealizedThroughObjective"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Objective"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A high-level statement of intent or direction for an organization. Typically used to measure success of an organization.</rdfs:comment>
+        <rdfs:label>Goal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#GovernanceExtension -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#GovernanceExtension">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InformationSystemService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InformationSystemService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServicesExtension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceIsRealizedThroughLogicalApplicationComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceIsServedByTechnologyService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceIsUsedByDataEntity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceRealizesBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The automated elements of a business service. An information system service may deliver or support part or all of one or more business services.</rdfs:comment>
+        <rdfs:label>Information System Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InfrastructureConsolidationExtension -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InfrastructureConsolidationExtension">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Location">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#AssociationObjects"/>
+        <rdfs:comment>A place where business activity takes place and can be hierarchically decomposed.</rdfs:comment>
+        <rdfs:label>Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentCommunicatesWithLogicalApplicationComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentDecomposesLogicalApplicationComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentImplementsBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentImplementsInformationSystemService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InformationSystemService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsDecomposedByLogicalApplicationComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsRealizedByPhysicalApplicationComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsServedByLogicalTechnologyComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalTechnologyComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsUsedByLogicalDataComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalDataComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An encapsulation of application functionality that is independent of a particular implementation. For example, the classification of all purchase request processing applications implemented in an enterprise.</rdfs:comment>
+        <rdfs:label>Logical Application Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalDataComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalDataComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataModelingExtension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalDataComponentEncapsulatesDataEntity"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalDataComponentIsRealizedByPhysicalDataComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalDataComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalDataComponentUsesLogicalApplicationComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A boundary zone that encapsulates related data entities to form a logical location to be held; for example, external procurement information.</rdfs:comment>
+        <rdfs:label>Logical Data Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalTechnologyComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalTechnologyComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InfrastructureConsolidationExtension"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitectureComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentDecomposesLogicalTechnologyComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalTechnologyComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentIsDecomposedByLogicalTechnologyComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalTechnologyComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentIsDependentOnLogicalTechnologyComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalTechnologyComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentIsRealizedByPhysicalTechnologyComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalTechnologyComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentProvidesPlatformForBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentServesLogicalApplicationComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentSuppliesTechnologyService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An encapsulation of technology infrastructure that is independent of a particular product. A class of technology product; for example, supply chain management software as part of an Enterprise Resource Planning (ERP) suite, or a Commercial Off-The-Shelf (COTS) purchase request processing enterprise service.</rdfs:comment>
+        <rdfs:label>Logical Technology Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#GovernanceExtension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureDecomposesMeasure"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Measure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureIsDecomposedByMeasure"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Measure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureSetsPerformanceCriteriaForBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureSetsPerformanceCriteriaForObjective"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Objective"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An indicator or factor that can be tracked, usually on an ongoing basis, to determine success or alignment with objectives and goals.</rdfs:comment>
+        <rdfs:label>Measure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#MotivationExtension -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#MotivationExtension">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Objective -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Objective">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#MotivationExtension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveDecomposesObjective"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Objective"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveIsDecomposedByObjective"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Objective"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveIsTrackedAgainstMeasure"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Measure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveRealizesGoal"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Goal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A time-bounded milestone for an organization used to demonstrate progress towards a goal; for example, &quot;Increase capacity utilization by 30% by the end of 2019 to support the planned increase in market share&quot;.</rdfs:comment>
+        <rdfs:label>Objective</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitContainsActor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitDecomposesOrganizationUnit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitInvolvesProcess"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitIsDecomposedByOrganizationUnit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitIsMotivatedByDriver"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Driver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitOwnsAndGovernsBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitOwnsFunction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitProducesProduct"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitUsesBusinessCapability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A self-contained unit of resources with goals, objectives, and measures. Organization units may include external parties and business partner organizations.</rdfs:comment>
+        <rdfs:label>Organization Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalApplicationComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalApplicationComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InfrastructureConsolidationExtension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentCommunicatesWithPhysicalApplicationComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentDecomposesPhysicalApplicationComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentIsDecomposedByPhysicalApplicationComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentIsServedByPhysicalTechnologyComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalTechnologyComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentIsUsedByPhysicalDataComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalDataComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentRealizesLogicalApplicationComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An application, application module, application service, or other deployable component of functionality. For example, a configured and deployed instance of a Commercial Off-The-Shelf (COTS) Enterprise Resource Planning (ERP) supply chain management application.</rdfs:comment>
+        <rdfs:label>Physical Application Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalDataComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalDataComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataModelingExtension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentDecomposesPhysicalDataComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalDataComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentIsDecomposedByPhysicalDataComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalDataComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentRealizesLogicalDataComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalDataComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentUsesPhysicalApplicationComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A boundary zone that encapsulates related data entities to form a physical location to be held. For example, a purchase order business object, comprising purchase order header and item business object nodes.</rdfs:comment>
+        <rdfs:label>Physical Data Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalTechnologyComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalTechnologyComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitectureComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentDecomposesPhysicalTechnologyComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalTechnologyComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentIsDecomposedByPhysicalTechnologyComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalTechnologyComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentIsDependentOnPhysicalTechnologyComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalTechnologyComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentRealizesLogicalTechnologyComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalTechnologyComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentServesPhysicalApplicationComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalApplicationComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A specific technology infrastructure product or technology infrastructure product instance. For example, a particular product version of a Commercial Off-The-Shelf (COTS) solution, or a specific brand and version of server.</rdfs:comment>
+        <rdfs:label>Physical Technology Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Principle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Principle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#AssociationObjects"/>
+        <rdfs:comment>A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance.</rdfs:comment>
+        <rdfs:label>Principle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processDecomposesAndOrOrchestratesBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processDecomposesAndOrOrchestratesFunction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processDecomposesProcess"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processInvolvesOrganizationUnit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processIsDecomposedByProcess"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processIsGuidedByControl"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Control"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processIsPerformedByAndOrInvolvesRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processOperationalizesBusinessCapability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processPrecedesOrFollowsProcess"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processProducesProduct"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processResolvesAndOrGeneratesEvent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A process represents flow of control between or within functions and/or services (depends on the granularity of definition). Processes represent a sequence of activities that together achieve a specified outcome, can be decomposed into sub-processes, and can show operation of a function or service (at next level of detail). Processes may also be used to link or compose organizations, functions, services, and processes.</rdfs:comment>
+        <rdfs:label>Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ProcessModelingExtension -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ProcessModelingExtension">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Product">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ProcessModelingExtension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#productIsProducedByOrganizationUnit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#productIsProducedByProcess"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Output generated by the business. The business product of the execution of a process.</rdfs:comment>
+        <rdfs:label>Product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Requirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Requirement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#AssociationObjects"/>
+        <rdfs:comment>A quantitative statement of business need that must be met by a particular architecture or work package.</rdfs:comment>
+        <rdfs:label>Requirement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Role">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#roleDecomposesRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#roleIsDecomposedByRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#roleIsPerformedByActor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#rolePerformsAndOrParticipatesInProcess"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The usual or expected function of an actor, or the part somebody or something plays in a particular action or event. An actor may have a number of roles.</rdfs:comment>
+        <rdfs:label>Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServiceQuality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServiceQuality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#GovernanceExtension"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#serviceQualityAppliesToBusinessService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#serviceQualityAppliesToContract"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Contract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A preset configuration of non-functional attributes that may be assigned to a service or service contract.</rdfs:comment>
+        <rdfs:label>Service Quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServicesExtension -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServicesExtension">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitecture">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Architecture"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitectureComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalTechnologyComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalTechnologyComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitectureComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitectureComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitectureComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#technologyServiceIsSuppliedByLogicalTechnologyComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalTechnologyComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#technologyServiceServesInformationSystemService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InformationSystemService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A technical capability required to provide enabling infrastructure that supports the delivery of applications.</rdfs:comment>
+        <rdfs:label>Technology Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ValueStream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ValueStream">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsEnabledByBusinessCapability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsInfluencedByCourseOfAction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CourseOfAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsTriggeredByAndOrInvolvesActor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A representation of an end-to-end collection of value-adding activities that create an overall result for a customer, stakeholder, or end-user.</rdfs:comment>
+        <rdfs:label>Value Stream</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#WorkPackage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#WorkPackage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#AssociationObjects"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#workPackageDeliversCapability"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Capability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A set of actions identified to achieve one or more objectives for the business. A work package can be a part of a project, a complete project, or a program.</rdfs:comment>
+        <rdfs:label>Work Package</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Actor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessCapability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Contract"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Control"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CourseOfAction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Driver"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Event"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Goal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Objective"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Product"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Role"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServiceQuality"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ValueStream"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitecture"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitecture"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitecture"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitecture"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitectureComponent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Capability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitectureComponent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitectureComponent"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Assumption"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Constraint"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Gap"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Location"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Principle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Requirement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#WorkPackage"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataModelingExtension"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#GovernanceExtension"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InfrastructureConsolidationExtension"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#MotivationExtension"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ProcessModelingExtension"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServicesExtension"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataEntity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalDataComponent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalDataComponent"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InformationSystemService"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalApplicationComponent"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalTechnologyComponent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalTechnologyComponent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyService"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
