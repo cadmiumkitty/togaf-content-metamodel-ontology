@@ -12,6 +12,10 @@
       "@id": "http://www.w3.org/2000/01/rdf-schema#definedBy",
       "@type": "@id"
     },
+    "hasTopConcept": {
+      "@id": "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+      "@type": "@id"
+    },
     "inScheme": {
       "@id": "http://www.w3.org/2004/02/skos/core#inScheme",
       "@type": "@id"
@@ -30,264 +34,13 @@
   },
   "@graph": [
     {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_service",
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#objective",
       "@type": "Concept",
       "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService",
-      "definition": "Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization.",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Objective",
+      "definition": "A time-bounded milestone for an organization used to demonstrate progress towards a goal; for example, \"Increase capacity utilization by 30% by the end of 2019 to support the planned increase in market share\".",
       "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Business Service",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#process",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process",
-      "definition": "A process represents flow of control between or within functions and/or services (depends on the granularity of definition). Processes represent a sequence of activities that together achieve a specified outcome, can be decomposed into sub-processes, and can show operation of a function or service (at next level of detail). Processes may also be used to link or compose organizations, functions, services, and processes.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Process",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
-      "@type": "Concept",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitecture",
-      "definition": "A representation of holistic, multi-dimensional business views of: capabilities, end-to-end value delivery, information, and organizational structure; and the relationships among these business views and strategies, products, policies, initiatives, and stakeholders.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "note": "Business Architecture relates business elements to business goals and elements of other domains. Business Architecture is described in Part II, 7. Phase B: Business Architecture.",
-      "prefLabel": "Business Architecture",
-      "source": "https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap02.html",
-      "topConceptOf": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#physical_application_component",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#application_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalApplicationComponent",
-      "definition": "An application, application module, application service, or other deployable component of functionality. For example, a configured and deployed instance of a Commercial Off-The-Shelf (COTS) Enterprise Resource Planning (ERP) supply chain management application.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Physical Application Component",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#technology_service",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#technology_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyService",
-      "definition": "A technical capability required to provide enabling infrastructure that supports the delivery of applications.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Technology Service",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#service_quality",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServiceQuality",
-      "definition": "A preset configuration of non-functional attributes that may be assigned to a service or service contract.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Service Quality",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#location",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Location",
-      "definition": "A place where business activity takes place and can be hierarchically decomposed.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Location",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#gap",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Gap",
-      "definition": "A statement of difference between two states. Used in the context of gap analysis, where the difference between the Baseline and Target Architecture is identified.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "note": "Gap analysis is described in Part III, 27. Gap Analysis.",
-      "prefLabel": "Gap",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#physical_data_component",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#data_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalDataComponent",
-      "definition": "A boundary zone that encapsulates related data entities to form a physical location to be held. For example, a purchase order business object, comprising purchase order header and item business object nodes.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Physical Data Component",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#technology_architecture_component",
-      "@type": "Concept",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitecture",
-      "definition": "A description of the structure and interaction of the technology services and technology components.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "note": "Technology Architecture is described in Part II, 11. Phase D: Technology Architecture.",
-      "prefLabel": "Technology Architecture",
-      "source": "https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap02.html",
-      "topConceptOf": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#data_architecture_component",
-      "@type": "Concept",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitecture",
-      "definition": "A description of the structure and interaction of the enterprise's major types and sources of data, logical data assets, physical data assets, and data management resources.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "note": "Data Architecture is described in Part II, 9. Phase C: Information Systems Architectures - Data Architecture.",
-      "prefLabel": "Data Architecture",
-      "source": "https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap02.html",
-      "topConceptOf": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#requirement",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Requirement",
-      "definition": "A quantitative statement of business need that must be met by a particular architecture or work package.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Requirement",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#measure",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Measure",
-      "definition": "An indicator or factor that can be tracked, usually on an ongoing basis, to determine success or alignment with objectives and goals.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Measure",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#application_architecture_component",
-      "@type": "Concept",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitecture",
-      "definition": "A description of the structure and interaction of the applications as groups of capabilities that provide key business functions and manage the data assets.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "note": "Application Architecture is described in Part II, 10. Phase C: Information Systems Architectures - Application Architecture.",
-      "prefLabel": "Application Architecture",
-      "source": "https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap02.html",
-      "topConceptOf": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#principle",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Principle",
-      "definition": "A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "note": "A sample set of architecture principles is defined in Part III, 23. Architecture Principles.",
-      "prefLabel": "Principle",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#logical_application_component",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#application_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent",
-      "definition": "An encapsulation of application functionality that is independent of a particular implementation. For example, the classification of all purchase request processing applications implemented in an enterprise.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Logical Application Component",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#course_of_action",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CourseofAction",
-      "definition": "Direction and focus provided by strategic goals and objectives, often to deliver the value proposition characterized in the business model.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Course of Action",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#function",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function",
-      "definition": "Delivers business capabilities closely aligned to an organization, but not necessarily explicitly governed by the organization. Also referred to as \"business function\".",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Function",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#logical_technology_component",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#technology_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalTechnologyComponent",
-      "definition": "An encapsulation of technology infrastructure that is independent of a particular product. A class of technology product; for example, supply chain management software as part of an Enterprise Resource Planning (ERP) suite, or a Commercial Off-The-Shelf (COTS) purchase request processing enterprise service.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Logical Technology Component",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#event",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Event",
-      "definition": "An organizational state change that triggers processing events; may originate from inside or outside the organization and may be resolved inside or outside the organization.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Event",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "@type": "ConceptScheme",
-      "comment": "This is SKOS vocabulary version of the TOGAF Content Metamodel ontology. It is based on the TOGAF 9.2 Content Metamodel Ontology.",
-      "hasTopConcept": [
-        {
-          "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity"
-        },
-        {
-          "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#application_architecture_component"
-        },
-        {
-          "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#technology_architecture_component"
-        },
-        {
-          "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component"
-        },
-        {
-          "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#data_architecture_component"
-        }
-      ],
-      "label": "TOGAF 9.2 Content Metamodel Vocabulary",
-      "prefLabel": "TOGAF 9.2 Content Metamodel Vocabulary",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#application_component",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#application_architecture_component",
-      "definition": "An encapsulation of application functionality aligned to implementation structure. For example, a purchase request processing application.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "note": "Is not a part of TOGAF 9.2 Figure 30-7: Relationships between Entities in the Full Metamodel",
-      "prefLabel": "Application Component",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#data_entity",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#data_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataEntity",
-      "definition": "An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Data Entity",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#capability",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Capability",
-      "definition": "A business-focused outcome that is delivered by the completion of one or more work packages. Using a capability-based planning approach, change activities can be sequenced and grouped in order to provide continuous and incremental business value.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Capability",
+      "prefLabel": "Objective",
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
@@ -304,43 +57,87 @@
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#driver",
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#technology_architecture_component",
       "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Driver",
-      "definition": "An external or internal condition that motivates the organization to define its goals. An example of an external driver is a change in regulation or compliance rules which, for example, require changes to the way an organization operates; i.e., Sarbanes-Oxley in the US.",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitecture",
+      "definition": "A description of the structure and interaction of the technology services and technology components.",
       "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Driver",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+      "note": "Technology Architecture is described in Part II, 11. Phase D: Technology Architecture.",
+      "prefLabel": "Technology Architecture",
+      "source": "https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap02.html",
+      "topConceptOf": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme"
     },
     {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#physical_technology_component",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#technology_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalTechnologyComponent",
-      "definition": "A specific technology infrastructure product or technology infrastructure product instance. For example, a particular product version of a Commercial Off-The-Shelf (COTS) solution, or a specific brand and version of server.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Physical Technology Component",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#service",
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#gap",
       "@type": "Concept",
       "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
-      "definition": "An element of behavior that provides specific functionality in response to requests from actors or other services. A service delivers or supports business capabilities, has an explicitly defined interface, and is explicitly governed. Services are defined for business, information systems, and platforms.",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Gap",
+      "definition": "A statement of difference between two states. Used in the context of gap analysis, where the difference between the Baseline and Target Architecture is identified.",
       "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "note": "Is not a part of TOGAF 9.2 Figure 30-7: Relationships between Entities in the Full Metamodel",
-      "prefLabel": "Service",
+      "note": "Gap analysis is described in Part III, 27. Gap Analysis.",
+      "prefLabel": "Gap",
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#product",
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#organization_unit",
       "@type": "Concept",
       "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Product",
-      "definition": "Output generated by the business. The business product of the execution of a process.",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit",
+      "definition": "A self-contained unit of resources with goals, objectives, and measures. Organization units may include external parties and business partner organizations.",
       "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Product",
+      "prefLabel": "Organization Unit",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#course_of_action",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CourseofAction",
+      "definition": "Direction and focus provided by strategic goals and objectives, often to deliver the value proposition characterized in the business model.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Course of Action",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
+      "@type": "Concept",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitecture",
+      "definition": "A representation of holistic, multi-dimensional business views of: capabilities, end-to-end value delivery, information, and organizational structure; and the relationships among these business views and strategies, products, policies, initiatives, and stakeholders.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "note": "Business Architecture relates business elements to business goals and elements of other domains. Business Architecture is described in Part II, 7. Phase B: Business Architecture.",
+      "prefLabel": "Business Architecture",
+      "source": "https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap02.html",
+      "topConceptOf": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#function",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function",
+      "definition": "Delivers business capabilities closely aligned to an organization, but not necessarily explicitly governed by the organization. Also referred to as \"business function\".",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Function",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#data_architecture_component",
+      "@type": "Concept",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitecture",
+      "definition": "A description of the structure and interaction of the enterprise's major types and sources of data, logical data assets, physical data assets, and data management resources.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "note": "Data Architecture is described in Part II, 9. Phase C: Information Systems Architectures - Data Architecture.",
+      "prefLabel": "Data Architecture",
+      "source": "https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap02.html",
+      "topConceptOf": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#data_entity",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#data_architecture_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataEntity",
+      "definition": "An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Data Entity",
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
@@ -354,23 +151,33 @@
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#work_package",
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#physical_technology_component",
       "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#WorkPackage",
-      "definition": "A set of actions identified to achieve one or more objectives for the business. A work package can be a part of a project, a complete project, or a program.",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#technology_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalTechnologyComponent",
+      "definition": "A specific technology infrastructure product or technology infrastructure product instance. For example, a particular product version of a Commercial Off-The-Shelf (COTS) solution, or a specific brand and version of server.",
       "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Work Package",
+      "prefLabel": "Physical Technology Component",
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#logical_data_component",
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#event",
       "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#data_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalDataComponent",
-      "definition": "A boundary zone that encapsulates related data entities to form a logical location to be held; for example, external procurement information.",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Event",
+      "definition": "An organizational state change that triggers processing events; may originate from inside or outside the organization and may be resolved inside or outside the organization.",
       "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Logical Data Component",
+      "prefLabel": "Event",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#location",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Location",
+      "definition": "A place where business activity takes place and can be hierarchically decomposed.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Location",
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
@@ -384,33 +191,13 @@
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_capability",
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#product",
       "@type": "Concept",
       "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessCapability",
-      "definition": "A particular ability that a business may possess or exchange to achieve a particular purpose.",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Product",
+      "definition": "Output generated by the business. The business product of the execution of a process.",
       "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Business Capability",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#constraint",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Constraint",
-      "definition": "An external factor that prevents an organization from pursuing particular approaches to meet its goals. For example, customer data is not harmonized within the organization, regionally or nationally, constraining the organization's ability to offer effective customer service.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Constraint",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#assumption",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Assumption",
-      "definition": "A statement of probable fact that has not been fully validated at this stage, due to external constraints. For example, it may be assumed that an existing application will support a certain set of functional requirements, although those requirements may not yet have been individually validated.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Assumption",
+      "prefLabel": "Product",
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
@@ -424,33 +211,127 @@
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#information_system_service",
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#capability",
       "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#application_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InformationSystemService",
-      "definition": "The automated elements of a business service. An information system service may deliver or support part or all of one or more business services.",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Capability",
+      "definition": "A business-focused outcome that is delivered by the completion of one or more work packages. Using a capability-based planning approach, change activities can be sequenced and grouped in order to provide continuous and incremental business value.",
       "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Information System Service",
+      "prefLabel": "Capability",
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#contract",
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
       "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Contract",
-      "definition": "An agreement between a service consumer and a service provider that establishes functional and non-functional parameters for interaction.",
       "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Contract",
+      "prefLabel": "General Entity",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html",
+      "topConceptOf": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "@type": "ConceptScheme",
+      "comment": "This is SKOS vocabulary version of the TOGAF Content Metamodel ontology. It is based on the TOGAF 9.2 Content Metamodel Ontology.",
+      "hasTopConcept": [
+        "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#technology_architecture_component",
+        "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#data_architecture_component",
+        "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
+        "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
+        "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#application_architecture_component"
+      ],
+      "label": "TOGAF 9.2 Content Metamodel Vocabulary",
+      "prefLabel": "TOGAF 9.2 Content Metamodel Vocabulary",
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#organization_unit",
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#service_quality",
       "@type": "Concept",
       "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit",
-      "definition": "A self-contained unit of resources with goals, objectives, and measures. Organization units may include external parties and business partner organizations.",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServiceQuality",
+      "definition": "A preset configuration of non-functional attributes that may be assigned to a service or service contract.",
       "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Organization Unit",
+      "prefLabel": "Service Quality",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#logical_technology_component",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#technology_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalTechnologyComponent",
+      "definition": "An encapsulation of technology infrastructure that is independent of a particular product. A class of technology product; for example, supply chain management software as part of an Enterprise Resource Planning (ERP) suite, or a Commercial Off-The-Shelf (COTS) purchase request processing enterprise service.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Logical Technology Component",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#service",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
+      "definition": "An element of behavior that provides specific functionality in response to requests from actors or other services. A service delivers or supports business capabilities, has an explicitly defined interface, and is explicitly governed. Services are defined for business, information systems, and platforms.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "note": "Is not a part of TOGAF 9.2 Figure 30-7: Relationships between Entities in the Full Metamodel",
+      "prefLabel": "Service",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#value_stream",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ValueStream",
+      "definition": "A representation of an end-to-end collection of value-adding activities that create an overall result for a customer, stakeholder, or end-user.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "note": "Is not a part of TOGAF 9.2 Figure 30-7: Relationships between Entities in the Full Metamodel",
+      "prefLabel": "Value Stream",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#driver",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Driver",
+      "definition": "An external or internal condition that motivates the organization to define its goals. An example of an external driver is a change in regulation or compliance rules which, for example, require changes to the way an organization operates; i.e., Sarbanes-Oxley in the US.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Driver",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#logical_data_component",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#data_architecture_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalDataComponent",
+      "definition": "A boundary zone that encapsulates related data entities to form a logical location to be held; for example, external procurement information.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Logical Data Component",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_capability",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessCapability",
+      "definition": "A particular ability that a business may possess or exchange to achieve a particular purpose.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Business Capability",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#measure",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Measure",
+      "definition": "An indicator or factor that can be tracked, usually on an ongoing basis, to determine success or alignment with objectives and goals.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Measure",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#logical_application_component",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#application_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent",
+      "definition": "An encapsulation of application functionality that is independent of a particular implementation. For example, the classification of all purchase request processing applications implemented in an enterprise.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Logical Application Component",
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
@@ -467,32 +348,145 @@
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#contract",
       "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Contract",
+      "definition": "An agreement between a service consumer and a service provider that establishes functional and non-functional parameters for interaction.",
       "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "General Entity",
-      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html",
-      "topConceptOf": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme"
-    },
-    {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#value_stream",
-      "@type": "Concept",
-      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ValueStream",
-      "definition": "A representation of an end-to-end collection of value-adding activities that create an overall result for a customer, stakeholder, or end-user.",
-      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "note": "Is not a part of TOGAF 9.2 Figure 30-7: Relationships between Entities in the Full Metamodel",
-      "prefLabel": "Value Stream",
+      "prefLabel": "Contract",
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     },
     {
-      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#objective",
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#constraint",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Constraint",
+      "definition": "An external factor that prevents an organization from pursuing particular approaches to meet its goals. For example, customer data is not harmonized within the organization, regionally or nationally, constraining the organization's ability to offer effective customer service.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Constraint",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#process",
       "@type": "Concept",
       "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
-      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Objective",
-      "definition": "A time-bounded milestone for an organization used to demonstrate progress towards a goal; for example, \"Increase capacity utilization by 30% by the end of 2019 to support the planned increase in market share\".",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process",
+      "definition": "A process represents flow of control between or within functions and/or services (depends on the granularity of definition). Processes represent a sequence of activities that together achieve a specified outcome, can be decomposed into sub-processes, and can show operation of a function or service (at next level of detail). Processes may also be used to link or compose organizations, functions, services, and processes.",
       "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
-      "prefLabel": "Objective",
+      "prefLabel": "Process",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#information_system_service",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#application_architecture_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InformationSystemService",
+      "definition": "The automated elements of a business service. An information system service may deliver or support part or all of one or more business services.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Information System Service",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_service",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#business_architecture_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService",
+      "definition": "Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Business Service",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#work_package",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#WorkPackage",
+      "definition": "A set of actions identified to achieve one or more objectives for the business. A work package can be a part of a project, a complete project, or a program.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Work Package",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#technology_service",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#technology_architecture_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyService",
+      "definition": "A technical capability required to provide enabling infrastructure that supports the delivery of applications.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Technology Service",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#physical_application_component",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#application_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalApplicationComponent",
+      "definition": "An application, application module, application service, or other deployable component of functionality. For example, a configured and deployed instance of a Commercial Off-The-Shelf (COTS) Enterprise Resource Planning (ERP) supply chain management application.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Physical Application Component",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#principle",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Principle",
+      "definition": "A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "note": "A sample set of architecture principles is defined in Part III, 23. Architecture Principles.",
+      "prefLabel": "Principle",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#assumption",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Assumption",
+      "definition": "A statement of probable fact that has not been fully validated at this stage, due to external constraints. For example, it may be assumed that an existing application will support a certain set of functional requirements, although those requirements may not yet have been individually validated.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Assumption",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#physical_data_component",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#data_architecture_component",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalDataComponent",
+      "definition": "A boundary zone that encapsulates related data entities to form a physical location to be held. For example, a purchase order business object, comprising purchase order header and item business object nodes.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Physical Data Component",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#requirement",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#general_entity",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Requirement",
+      "definition": "A quantitative statement of business need that must be met by a particular architecture or work package.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "prefLabel": "Requirement",
+      "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#application_architecture_component",
+      "@type": "Concept",
+      "definedBy": "http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitecture",
+      "definition": "A description of the structure and interaction of the applications as groups of capabilities that provide key business functions and manage the data assets.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "note": "Application Architecture is described in Part II, 10. Phase C: Information Systems Architectures - Application Architecture.",
+      "prefLabel": "Application Architecture",
+      "source": "https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap02.html",
+      "topConceptOf": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme"
+    },
+    {
+      "@id": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#application_component",
+      "@type": "Concept",
+      "broader": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#application_architecture_component",
+      "definition": "An encapsulation of application functionality aligned to implementation structure. For example, a purchase request processing application.",
+      "inScheme": "http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#scheme",
+      "note": "Is not a part of TOGAF 9.2 Figure 30-7: Relationships between Entities in the Full Metamodel",
+      "prefLabel": "Application Component",
       "source": "https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html"
     }
   ]
