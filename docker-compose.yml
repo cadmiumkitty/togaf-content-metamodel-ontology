@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  notebook:
+    build: notebook
+    image: notebook
+    ports:
+      - "8888:8888"
+    volumes: 
+      - .:/metamodel
+

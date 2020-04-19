@@ -1,0 +1,2052 @@
+@prefix : <http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix togaf: <http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#> .
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@base <http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl> .
+
+<http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl> rdf:type owl:Ontology ;
+                                                                                  owl:priorVersion <http://www.semanticweb.org/ontologies/2010/0/OntologyTOGAFContentMetamodel.owl> ;
+                                                                                  owl:versionInfo "This is version 2.0 of the TOGAF Content Metamodel ontology. It is based on the Content Metamodel of the TOGAF Version 9.2 standard. See https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap30.html for the complete set of entities, attributes and relationships."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorBelongsToOrganizationUnit
+togaf:actorBelongsToOrganizationUnit rdf:type owl:ObjectProperty ;
+                                     owl:inverseOf togaf:organizationUnitContainsActor ;
+                                     rdfs:label "belongs to" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorConsumesBusinessService
+togaf:actorConsumesBusinessService rdf:type owl:ObjectProperty ;
+                                   owl:inverseOf togaf:businessServiceIsProvidedToActor ;
+                                   rdfs:label "consumes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorDecomposesActor
+togaf:actorDecomposesActor rdf:type owl:ObjectProperty ;
+                           owl:inverseOf togaf:actorIsDecomposedByActor ;
+                           rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorGeneratesAndOrResolvesEvent
+togaf:actorGeneratesAndOrResolvesEvent rdf:type owl:ObjectProperty ;
+                                       owl:inverseOf togaf:eventIsGeneratedAndOrResolvedByActor ;
+                                       rdfs:label "generates and/or resolves" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorIsDecomposedByActor
+togaf:actorIsDecomposedByActor rdf:type owl:ObjectProperty ;
+                               rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorPerformsAndOrInteractsWithFunction
+togaf:actorPerformsAndOrInteractsWithFunction rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf togaf:functionIsPerformedByAndOrSupportsActor ;
+                                              rdfs:label "performs and/or interacts with" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorPerformsTaskInRole
+togaf:actorPerformsTaskInRole rdf:type owl:ObjectProperty ;
+                              owl:inverseOf togaf:roleIsPerformedByActor ;
+                              rdfs:label "performs task in" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorSuppliesOrConsumesDataEntity
+togaf:actorSuppliesOrConsumesDataEntity rdf:type owl:ObjectProperty ;
+                                        owl:inverseOf togaf:dataEntityIsSuppliedOrConsumedByActor ;
+                                        rdfs:label "supplies/consumes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#actorTriggersAndOrParticipatesInValueStream
+togaf:actorTriggersAndOrParticipatesInValueStream rdf:type owl:ObjectProperty ;
+                                                  owl:inverseOf togaf:valueStreamIsTriggeredByAndOrInvolvesActor ;
+                                                  rdfs:label "triggers and/or participates in" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#associatedWith
+togaf:associatedWith rdf:type owl:ObjectProperty ;
+                     rdfs:label "associated with" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityDecomposesBusinessCapability
+togaf:businessCapabilityDecomposesBusinessCapability rdf:type owl:ObjectProperty ;
+                                                     owl:inverseOf togaf:businessCapabilityIsDecomposedByBusinessCapability ;
+                                                     rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityEnablesValueStream
+togaf:businessCapabilityEnablesValueStream rdf:type owl:ObjectProperty ;
+                                           owl:inverseOf togaf:valueStreamIsEnabledByBusinessCapability ;
+                                           rdfs:label "enables" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsDecomposedByBusinessCapability
+togaf:businessCapabilityIsDecomposedByBusinessCapability rdf:type owl:ObjectProperty ;
+                                                         rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsDeliveredByFunction
+togaf:businessCapabilityIsDeliveredByFunction rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf togaf:functionDeliversBusinessCapability ;
+                                              rdfs:label "is delivered by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsInfluencedByCourseOfAction
+togaf:businessCapabilityIsInfluencedByCourseOfAction rdf:type owl:ObjectProperty ;
+                                                     owl:inverseOf togaf:courseOfActionInfluencesBusinessCapability ;
+                                                     rdfs:label "is influenced by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsOperationalizedByProcess
+togaf:businessCapabilityIsOperationalizedByProcess rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf togaf:processOperationalizesBusinessCapability ;
+                                                   rdfs:label "is operationalized by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessCapabilityIsUsedByOrganizationUnit
+togaf:businessCapabilityIsUsedByOrganizationUnit rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf togaf:organizationUnitUsesBusinessCapability ;
+                                                 rdfs:label "is used by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceConsumesBusinessService
+togaf:businessServiceConsumesBusinessService rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf togaf:businessServiceIsConsumedByBusinessService ;
+                                             rdfs:label "consumes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceDecomposesBusinessService
+togaf:businessServiceDecomposesBusinessService rdf:type owl:ObjectProperty ;
+                                               owl:inverseOf togaf:businessServiceIsDecomposedByBusinessService ;
+                                               rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsConsumedByBusinessService
+togaf:businessServiceIsConsumedByBusinessService rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "is consumed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsDecomposedByBusinessService
+togaf:businessServiceIsDecomposedByBusinessService rdf:type owl:ObjectProperty ;
+                                                   rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsGovernedAndMeasuredByContract
+togaf:businessServiceIsGovernedAndMeasuredByContract rdf:type owl:ObjectProperty ;
+                                                     owl:inverseOf togaf:contractGovernsAndMeasuresBusinessService ;
+                                                     rdfs:label "is governed and measured by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsImplementedOnLogicalTechnologyComponent
+togaf:businessServiceIsImplementedOnLogicalTechnologyComponent rdf:type owl:ObjectProperty ;
+                                                               owl:inverseOf togaf:logicalTechnologyComponentProvidesPlatformForBusinessService ;
+                                                               rdfs:label "is implemented on" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsOwnedAndGovernedByOrganizationUnit
+togaf:businessServiceIsOwnedAndGovernedByOrganizationUnit rdf:type owl:ObjectProperty ;
+                                                          owl:inverseOf togaf:organizationUnitOwnsAndGovernsBusinessService ;
+                                                          rdfs:label "is owned and governed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsProvidedToActor
+togaf:businessServiceIsProvidedToActor rdf:type owl:ObjectProperty ;
+                                       rdfs:label "is provided to" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsRealizedByAndOrSupportsProcess
+togaf:businessServiceIsRealizedByAndOrSupportsProcess rdf:type owl:ObjectProperty ;
+                                                      owl:inverseOf togaf:processDecomposesAndOrOrchestratesBusinessService ;
+                                                      rdfs:label "is realized by and/or supports" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsRealizedThroughInformationSystemService
+togaf:businessServiceIsRealizedThroughInformationSystemService rdf:type owl:ObjectProperty ;
+                                                               owl:inverseOf togaf:informationSystemServiceRealizesBusinessService ;
+                                                               rdfs:label "is realized through" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsRealizedThroughLogicalApplicationComponent
+togaf:businessServiceIsRealizedThroughLogicalApplicationComponent rdf:type owl:ObjectProperty ;
+                                                                  owl:inverseOf togaf:logicalApplicationComponentImplementsBusinessService ;
+                                                                  rdfs:label "is realized through" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceIsTrackedAgainstMeasure
+togaf:businessServiceIsTrackedAgainstMeasure rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf togaf:measureSetsPerformanceCriteriaForBusinessService ;
+                                             rdfs:label "is tracked against" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceMeetsServiceQuality
+togaf:businessServiceMeetsServiceQuality rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf togaf:serviceQualityAppliesToBusinessService ;
+                                         rdfs:label "meets" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceProvidesAndOrConsumesDataEntity
+togaf:businessServiceProvidesAndOrConsumesDataEntity rdf:type owl:ObjectProperty ;
+                                                     owl:inverseOf togaf:dataEntityIsAccessedAndUpdatedThroughBusinessService ;
+                                                     rdfs:label "provides and/or consumes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceProvidesGovernedInterfaceToAccessFunction
+togaf:businessServiceProvidesGovernedInterfaceToAccessFunction rdf:type owl:ObjectProperty ;
+                                                               owl:inverseOf togaf:functionIsBoundedByBusinessService ;
+                                                               rdfs:label "provides governed interface to access" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#businessServiceResolvesEvent
+togaf:businessServiceResolvesEvent rdf:type owl:ObjectProperty ;
+                                   owl:inverseOf togaf:eventIsResolvedByBusinessService ;
+                                   rdfs:label "resolves" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#capabilityIsDeliveredByWorkPackage
+togaf:capabilityIsDeliveredByWorkPackage rdf:type owl:ObjectProperty ;
+                                         owl:inverseOf togaf:workPackageDeliversCapability ;
+                                         rdfs:label "is delivered by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#category
+togaf:category rdf:type owl:ObjectProperty ;
+               rdfs:domain togaf:ContentClassification ;
+               rdfs:comment "User-definable categorization taxonomy for each metamodel entity." ;
+               rdfs:label "category" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#contractGovernsAndMeasuresBusinessService
+togaf:contractGovernsAndMeasuresBusinessService rdf:type owl:ObjectProperty ;
+                                                rdfs:label "governs and measures" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#contractMeetsServiceQuality
+togaf:contractMeetsServiceQuality rdf:type owl:ObjectProperty ;
+                                  owl:inverseOf togaf:serviceQualityAppliesToContract ;
+                                  rdfs:label "meets" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#controlEnsuresCorrectOperationOfProcess
+togaf:controlEnsuresCorrectOperationOfProcess rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf togaf:processIsGuidedByControl ;
+                                              rdfs:label "ensures correct operation of" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionInfluencesBusinessCapability
+togaf:courseOfActionInfluencesBusinessCapability rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "influences" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionInfluencesFunction
+togaf:courseOfActionInfluencesFunction rdf:type owl:ObjectProperty ;
+                                       owl:inverseOf togaf:functionIsInfluencedByCourseOfAction ;
+                                       rdfs:label "influences" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionInfluencesValueStream
+togaf:courseOfActionInfluencesValueStream rdf:type owl:ObjectProperty ;
+                                          owl:inverseOf togaf:valueStreamIsInfluencedByCourseOfAction ;
+                                          rdfs:label "influences" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#courseOfActionRealizesGoal
+togaf:courseOfActionRealizesGoal rdf:type owl:ObjectProperty ;
+                                 owl:inverseOf togaf:goalIsRealizedByCourseOfAction ;
+                                 rdfs:label "realizes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityDecomposesDataEntity
+togaf:dataEntityDecomposesDataEntity rdf:type owl:ObjectProperty ;
+                                     owl:inverseOf togaf:dataEntityIsDecomposedByDataEntity ;
+                                     rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsAccessedAndUpdatedThroughBusinessService
+togaf:dataEntityIsAccessedAndUpdatedThroughBusinessService rdf:type owl:ObjectProperty ;
+                                                           rdfs:label "is accessed and updated through" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsDecomposedByDataEntity
+togaf:dataEntityIsDecomposedByDataEntity rdf:type owl:ObjectProperty ;
+                                         rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityIsSuppliedOrConsumedByActor
+togaf:dataEntityIsSuppliedOrConsumedByActor rdf:type owl:ObjectProperty ;
+                                            rdfs:label "is supplied/consumed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityRelatesToDataEntity
+togaf:dataEntityRelatesToDataEntity rdf:type owl:ObjectProperty ,
+                                             owl:SymmetricProperty ;
+                                    rdfs:label "relates to" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityResidesWithinLogicalDataComponent
+togaf:dataEntityResidesWithinLogicalDataComponent rdf:type owl:ObjectProperty ;
+                                                  owl:inverseOf togaf:logicalDataComponentEncapsulatesDataEntity ;
+                                                  rdfs:label "resides within" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#dataEntityUsesInformationSystemService
+togaf:dataEntityUsesInformationSystemService rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf togaf:informationSystemServiceIsUsedByDataEntity ;
+                                             rdfs:label "uses" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverCreatesGoal
+togaf:driverCreatesGoal rdf:type owl:ObjectProperty ;
+                        owl:inverseOf togaf:goalAddressesDriver ;
+                        rdfs:label "creates" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverDecomposesDriver
+togaf:driverDecomposesDriver rdf:type owl:ObjectProperty ;
+                             owl:inverseOf togaf:driverIsDecomposedByDriver ;
+                             rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverIsDecomposedByDriver
+togaf:driverIsDecomposedByDriver rdf:type owl:ObjectProperty ;
+                                 rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#driverMotivatesOrganizationUnit
+togaf:driverMotivatesOrganizationUnit rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf togaf:organizationUnitIsMotivatedByDriver ;
+                                      rdfs:label "motivates" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#eventIsGeneratedAndOrResolvedByActor
+togaf:eventIsGeneratedAndOrResolvedByActor rdf:type owl:ObjectProperty ;
+                                           rdfs:label "is generated and/or resolved by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#eventIsResolvedAndOrGeneratedByProcess
+togaf:eventIsResolvedAndOrGeneratedByProcess rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf togaf:processResolvesAndOrGeneratesEvent ;
+                                             rdfs:label "is resolved and/or generated by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#eventIsResolvedByBusinessService
+togaf:eventIsResolvedByBusinessService rdf:type owl:ObjectProperty ;
+                                       rdfs:label "is resolved by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionCommunicatesWithFunction
+togaf:functionCommunicatesWithFunction rdf:type owl:ObjectProperty ,
+                                                owl:SymmetricProperty ;
+                                       rdfs:label "communicates with" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionDecomposesFunction
+togaf:functionDecomposesFunction rdf:type owl:ObjectProperty ;
+                                 owl:inverseOf togaf:functionIsDecomposedByFunction ;
+                                 rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionDeliversBusinessCapability
+togaf:functionDeliversBusinessCapability rdf:type owl:ObjectProperty ;
+                                         rdfs:label "delivers" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsBoundedByBusinessService
+togaf:functionIsBoundedByBusinessService rdf:type owl:ObjectProperty ;
+                                         rdfs:label "is bounded by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsDecomposedByFunction
+togaf:functionIsDecomposedByFunction rdf:type owl:ObjectProperty ;
+                                     rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsInfluencedByCourseOfAction
+togaf:functionIsInfluencedByCourseOfAction rdf:type owl:ObjectProperty ;
+                                           rdfs:label "is influenced by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsOwnedByOrganizationUnit
+togaf:functionIsOwnedByOrganizationUnit rdf:type owl:ObjectProperty ;
+                                        owl:inverseOf togaf:organizationUnitOwnsFunction ;
+                                        rdfs:label "is owned by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsPerformedByAndOrSupportsActor
+togaf:functionIsPerformedByAndOrSupportsActor rdf:type owl:ObjectProperty ;
+                                              rdfs:label "is performed by and/or supports" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#functionIsRealizedByAndOrSupportsProcess
+togaf:functionIsRealizedByAndOrSupportsProcess rdf:type owl:ObjectProperty ;
+                                               owl:inverseOf togaf:processDecomposesAndOrOrchestratesFunction ;
+                                               rdfs:label "is realized by and/or supports" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalAddressesDriver
+togaf:goalAddressesDriver rdf:type owl:ObjectProperty ;
+                          rdfs:label "addresses" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalDecomposesGoal
+togaf:goalDecomposesGoal rdf:type owl:ObjectProperty ;
+                         owl:inverseOf togaf:goalIsDecomposedByGoal ;
+                         rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsDecomposedByGoal
+togaf:goalIsDecomposedByGoal rdf:type owl:ObjectProperty ;
+                             rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsRealizedByCourseOfAction
+togaf:goalIsRealizedByCourseOfAction rdf:type owl:ObjectProperty ;
+                                     rdfs:label "is realized by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsRealizedThroughObjective
+togaf:goalIsRealizedThroughObjective rdf:type owl:ObjectProperty ;
+                                     owl:inverseOf togaf:objectiveRealizesGoal ;
+                                     rdfs:label "is realized through" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent
+togaf:hasComponent rdf:type owl:ObjectProperty ;
+                   rdfs:label "has component" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceIsRealizedThroughLogicalApplicationComponent
+togaf:informationSystemServiceIsRealizedThroughLogicalApplicationComponent rdf:type owl:ObjectProperty ;
+                                                                           owl:inverseOf togaf:logicalApplicationComponentImplementsInformationSystemService ;
+                                                                           rdfs:label "is realized through" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceIsServedByTechnologyService
+togaf:informationSystemServiceIsServedByTechnologyService rdf:type owl:ObjectProperty ;
+                                                          owl:inverseOf togaf:technologyServiceServesInformationSystemService ;
+                                                          rdfs:label "is served by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceIsUsedByDataEntity
+togaf:informationSystemServiceIsUsedByDataEntity rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "is used by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#informationSystemServiceRealizesBusinessService
+togaf:informationSystemServiceRealizesBusinessService rdf:type owl:ObjectProperty ;
+                                                      rdfs:label "realizes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentCommunicatesWithLogicalApplicationComponent
+togaf:logicalApplicationComponentCommunicatesWithLogicalApplicationComponent rdf:type owl:ObjectProperty ,
+                                                                                      owl:SymmetricProperty ;
+                                                                             rdfs:label "communicates with" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentDecomposesLogicalApplicationComponent
+togaf:logicalApplicationComponentDecomposesLogicalApplicationComponent rdf:type owl:ObjectProperty ;
+                                                                       owl:inverseOf togaf:logicalApplicationComponentIsDecomposedByLogicalApplicationComponent ;
+                                                                       rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentImplementsBusinessService
+togaf:logicalApplicationComponentImplementsBusinessService rdf:type owl:ObjectProperty ;
+                                                           rdfs:label "implements" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentImplementsInformationSystemService
+togaf:logicalApplicationComponentImplementsInformationSystemService rdf:type owl:ObjectProperty ;
+                                                                    rdfs:label "implements" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsDecomposedByLogicalApplicationComponent
+togaf:logicalApplicationComponentIsDecomposedByLogicalApplicationComponent rdf:type owl:ObjectProperty ;
+                                                                           rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsRealizedByPhysicalApplicationComponent
+togaf:logicalApplicationComponentIsRealizedByPhysicalApplicationComponent rdf:type owl:ObjectProperty ;
+                                                                          owl:inverseOf togaf:physicalApplicationComponentRealizesLogicalApplicationComponent ;
+                                                                          rdfs:label "is realized by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsServedByLogicalTechnologyComponent
+togaf:logicalApplicationComponentIsServedByLogicalTechnologyComponent rdf:type owl:ObjectProperty ;
+                                                                      owl:inverseOf togaf:logicalTechnologyComponentServesLogicalApplicationComponent ;
+                                                                      rdfs:label "is served by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalApplicationComponentIsUsedByLogicalDataComponent
+togaf:logicalApplicationComponentIsUsedByLogicalDataComponent rdf:type owl:ObjectProperty ;
+                                                              owl:inverseOf togaf:logicalDataComponentUsesLogicalApplicationComponent ;
+                                                              rdfs:label "is used by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalDataComponentEncapsulatesDataEntity
+togaf:logicalDataComponentEncapsulatesDataEntity rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "encapsulates" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalDataComponentIsRealizedByPhysicalDataComponent
+togaf:logicalDataComponentIsRealizedByPhysicalDataComponent rdf:type owl:ObjectProperty ;
+                                                            owl:inverseOf togaf:physicalDataComponentRealizesLogicalDataComponent ;
+                                                            rdfs:label "is realized by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalDataComponentUsesLogicalApplicationComponent
+togaf:logicalDataComponentUsesLogicalApplicationComponent rdf:type owl:ObjectProperty ;
+                                                          rdfs:label "uses" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentDecomposesLogicalTechnologyComponent
+togaf:logicalTechnologyComponentDecomposesLogicalTechnologyComponent rdf:type owl:ObjectProperty ;
+                                                                     owl:inverseOf togaf:logicalTechnologyComponentIsDecomposedByLogicalTechnologyComponent ;
+                                                                     rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentIsDecomposedByLogicalTechnologyComponent
+togaf:logicalTechnologyComponentIsDecomposedByLogicalTechnologyComponent rdf:type owl:ObjectProperty ;
+                                                                         rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentIsDependentOnLogicalTechnologyComponent
+togaf:logicalTechnologyComponentIsDependentOnLogicalTechnologyComponent rdf:type owl:ObjectProperty ;
+                                                                        rdfs:label "is dependent on" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentIsRealizedByPhysicalTechnologyComponent
+togaf:logicalTechnologyComponentIsRealizedByPhysicalTechnologyComponent rdf:type owl:ObjectProperty ;
+                                                                        owl:inverseOf togaf:physicalTechnologyComponentRealizesLogicalTechnologyComponent ;
+                                                                        rdfs:label "is realized by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentProvidesPlatformForBusinessService
+togaf:logicalTechnologyComponentProvidesPlatformForBusinessService rdf:type owl:ObjectProperty ;
+                                                                   rdfs:label "provides platform for" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentServesLogicalApplicationComponent
+togaf:logicalTechnologyComponentServesLogicalApplicationComponent rdf:type owl:ObjectProperty ;
+                                                                  rdfs:label "serves" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#logicalTechnologyComponentSuppliesTechnologyService
+togaf:logicalTechnologyComponentSuppliesTechnologyService rdf:type owl:ObjectProperty ;
+                                                          owl:inverseOf togaf:technologyServiceIsSuppliedByLogicalTechnologyComponent ;
+                                                          rdfs:label "supplies" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureDecomposesMeasure
+togaf:measureDecomposesMeasure rdf:type owl:ObjectProperty ;
+                               owl:inverseOf togaf:measureIsDecomposedByMeasure ;
+                               rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureIsDecomposedByMeasure
+togaf:measureIsDecomposedByMeasure rdf:type owl:ObjectProperty ;
+                                   rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureSetsPerformanceCriteriaForBusinessService
+togaf:measureSetsPerformanceCriteriaForBusinessService rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "sets performance criteria for" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#measureSetsPerformanceCriteriaForObjective
+togaf:measureSetsPerformanceCriteriaForObjective rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf togaf:objectiveIsTrackedAgainstMeasure ;
+                                                 rdfs:label "sets performance criteria for" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveDecomposesObjective
+togaf:objectiveDecomposesObjective rdf:type owl:ObjectProperty ;
+                                   owl:inverseOf togaf:objectiveIsDecomposedByObjective ;
+                                   rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveIsDecomposedByObjective
+togaf:objectiveIsDecomposedByObjective rdf:type owl:ObjectProperty ;
+                                       rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveIsTrackedAgainstMeasure
+togaf:objectiveIsTrackedAgainstMeasure rdf:type owl:ObjectProperty ;
+                                       rdfs:label "is tracked against" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveRealizesGoal
+togaf:objectiveRealizesGoal rdf:type owl:ObjectProperty ;
+                            rdfs:label "realizes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitContainsActor
+togaf:organizationUnitContainsActor rdf:type owl:ObjectProperty ;
+                                    rdfs:label "contains" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitDecomposesOrganizationUnit
+togaf:organizationUnitDecomposesOrganizationUnit rdf:type owl:ObjectProperty ;
+                                                 owl:inverseOf togaf:organizationUnitIsDecomposedByOrganizationUnit ;
+                                                 rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitInvolvesProcess
+togaf:organizationUnitInvolvesProcess rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf togaf:processInvolvesOrganizationUnit ;
+                                      rdfs:label "involves" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitIsDecomposedByOrganizationUnit
+togaf:organizationUnitIsDecomposedByOrganizationUnit rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitIsMotivatedByDriver
+togaf:organizationUnitIsMotivatedByDriver rdf:type owl:ObjectProperty ;
+                                          rdfs:label "is motivated by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitOwnsAndGovernsBusinessService
+togaf:organizationUnitOwnsAndGovernsBusinessService rdf:type owl:ObjectProperty ;
+                                                    rdfs:label "owns and governs" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitOwnsFunction
+togaf:organizationUnitOwnsFunction rdf:type owl:ObjectProperty ;
+                                   rdfs:label "owns" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitProducesProduct
+togaf:organizationUnitProducesProduct rdf:type owl:ObjectProperty ;
+                                      owl:inverseOf togaf:productIsProducedByOrganizationUnit ;
+                                      rdfs:label "produces" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#organizationUnitUsesBusinessCapability
+togaf:organizationUnitUsesBusinessCapability rdf:type owl:ObjectProperty ;
+                                             rdfs:label "uses" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentCommunicatesWithPhysicalApplicationComponent
+togaf:physicalApplicationComponentCommunicatesWithPhysicalApplicationComponent rdf:type owl:ObjectProperty ,
+                                                                                        owl:SymmetricProperty ;
+                                                                               rdfs:label "communicates with" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentDecomposesPhysicalApplicationComponent
+togaf:physicalApplicationComponentDecomposesPhysicalApplicationComponent rdf:type owl:ObjectProperty ;
+                                                                         owl:inverseOf togaf:physicalApplicationComponentIsDecomposedByPhysicalApplicationComponent ;
+                                                                         rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentIsDecomposedByPhysicalApplicationComponent
+togaf:physicalApplicationComponentIsDecomposedByPhysicalApplicationComponent rdf:type owl:ObjectProperty ;
+                                                                             rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentIsServedByPhysicalTechnologyComponent
+togaf:physicalApplicationComponentIsServedByPhysicalTechnologyComponent rdf:type owl:ObjectProperty ;
+                                                                        owl:inverseOf togaf:physicalTechnologyComponentServesPhysicalApplicationComponent ;
+                                                                        rdfs:label "is served by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentIsUsedByPhysicalDataComponent
+togaf:physicalApplicationComponentIsUsedByPhysicalDataComponent rdf:type owl:ObjectProperty ;
+                                                                owl:inverseOf togaf:physicalDataComponentUsesPhysicalApplicationComponent ;
+                                                                rdfs:label "is used by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalApplicationComponentRealizesLogicalApplicationComponent
+togaf:physicalApplicationComponentRealizesLogicalApplicationComponent rdf:type owl:ObjectProperty ;
+                                                                      rdfs:label "realizes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentDecomposesPhysicalDataComponent
+togaf:physicalDataComponentDecomposesPhysicalDataComponent rdf:type owl:ObjectProperty ;
+                                                           owl:inverseOf togaf:physicalDataComponentIsDecomposedByPhysicalDataComponent ;
+                                                           rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentIsDecomposedByPhysicalDataComponent
+togaf:physicalDataComponentIsDecomposedByPhysicalDataComponent rdf:type owl:ObjectProperty ;
+                                                               rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentRealizesLogicalDataComponent
+togaf:physicalDataComponentRealizesLogicalDataComponent rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "realizes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalDataComponentUsesPhysicalApplicationComponent
+togaf:physicalDataComponentUsesPhysicalApplicationComponent rdf:type owl:ObjectProperty ;
+                                                            rdfs:label "uses" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentDecomposesPhysicalTechnologyComponent
+togaf:physicalTechnologyComponentDecomposesPhysicalTechnologyComponent rdf:type owl:ObjectProperty ;
+                                                                       owl:inverseOf togaf:physicalTechnologyComponentIsDecomposedByPhysicalTechnologyComponent ;
+                                                                       rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentIsDecomposedByPhysicalTechnologyComponent
+togaf:physicalTechnologyComponentIsDecomposedByPhysicalTechnologyComponent rdf:type owl:ObjectProperty ;
+                                                                           rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentIsDependentOnPhysicalTechnologyComponent
+togaf:physicalTechnologyComponentIsDependentOnPhysicalTechnologyComponent rdf:type owl:ObjectProperty ;
+                                                                          rdfs:label "is dependent on" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentRealizesLogicalTechnologyComponent
+togaf:physicalTechnologyComponentRealizesLogicalTechnologyComponent rdf:type owl:ObjectProperty ;
+                                                                    rdfs:label "realizes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#physicalTechnologyComponentServesPhysicalApplicationComponent
+togaf:physicalTechnologyComponentServesPhysicalApplicationComponent rdf:type owl:ObjectProperty ;
+                                                                    rdfs:label "serves" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processDecomposesAndOrOrchestratesBusinessService
+togaf:processDecomposesAndOrOrchestratesBusinessService rdf:type owl:ObjectProperty ;
+                                                        rdfs:label "decomposes and/or orchestrates" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processDecomposesAndOrOrchestratesFunction
+togaf:processDecomposesAndOrOrchestratesFunction rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "decomposes and/or orchestrates" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processDecomposesProcess
+togaf:processDecomposesProcess rdf:type owl:ObjectProperty ;
+                               owl:inverseOf togaf:processIsDecomposedByProcess ;
+                               rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processInvolvesOrganizationUnit
+togaf:processInvolvesOrganizationUnit rdf:type owl:ObjectProperty ;
+                                      rdfs:label "involves" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processIsDecomposedByProcess
+togaf:processIsDecomposedByProcess rdf:type owl:ObjectProperty ;
+                                   rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processIsGuidedByControl
+togaf:processIsGuidedByControl rdf:type owl:ObjectProperty ;
+                               rdfs:label "is guided by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processIsPerformedByAndOrInvolvesRole
+togaf:processIsPerformedByAndOrInvolvesRole rdf:type owl:ObjectProperty ;
+                                            owl:inverseOf togaf:rolePerformsAndOrParticipatesInProcess ;
+                                            rdfs:label "is performed by and/or involves" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processOperationalizesBusinessCapability
+togaf:processOperationalizesBusinessCapability rdf:type owl:ObjectProperty ;
+                                               rdfs:label "operationalizes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processPrecedesOrFollowsProcess
+togaf:processPrecedesOrFollowsProcess rdf:type owl:ObjectProperty ,
+                                               owl:SymmetricProperty ;
+                                      rdfs:label "precedes/follows" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processProducesProduct
+togaf:processProducesProduct rdf:type owl:ObjectProperty ;
+                             owl:inverseOf togaf:productIsProducedByProcess ;
+                             rdfs:label "produces" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#processResolvesAndOrGeneratesEvent
+togaf:processResolvesAndOrGeneratesEvent rdf:type owl:ObjectProperty ;
+                                         rdfs:label "resolves and/or generates" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#productIsProducedByOrganizationUnit
+togaf:productIsProducedByOrganizationUnit rdf:type owl:ObjectProperty ;
+                                          rdfs:label "is produced by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#productIsProducedByProcess
+togaf:productIsProducedByProcess rdf:type owl:ObjectProperty ;
+                                 rdfs:label "is produced by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#roleDecomposesRole
+togaf:roleDecomposesRole rdf:type owl:ObjectProperty ;
+                         owl:inverseOf togaf:roleIsDecomposedByRole ;
+                         rdfs:label "decomposes" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#roleIsDecomposedByRole
+togaf:roleIsDecomposedByRole rdf:type owl:ObjectProperty ;
+                             rdfs:label "is decomposed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#roleIsPerformedByActor
+togaf:roleIsPerformedByActor rdf:type owl:ObjectProperty ;
+                             rdfs:label "is performed by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#rolePerformsAndOrParticipatesInProcess
+togaf:rolePerformsAndOrParticipatesInProcess rdf:type owl:ObjectProperty ;
+                                             rdfs:label "performs and/or participates in" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#serviceQualityAppliesToBusinessService
+togaf:serviceQualityAppliesToBusinessService rdf:type owl:ObjectProperty ;
+                                             rdfs:label "applies to" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#serviceQualityAppliesToContract
+togaf:serviceQualityAppliesToContract rdf:type owl:ObjectProperty ;
+                                      rdfs:label "applies to" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#technologyServiceIsSuppliedByLogicalTechnologyComponent
+togaf:technologyServiceIsSuppliedByLogicalTechnologyComponent rdf:type owl:ObjectProperty ;
+                                                              rdfs:label "is supplied by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#technologyServiceServesInformationSystemService
+togaf:technologyServiceServesInformationSystemService rdf:type owl:ObjectProperty ;
+                                                      rdfs:label "serves" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsEnabledByBusinessCapability
+togaf:valueStreamIsEnabledByBusinessCapability rdf:type owl:ObjectProperty ;
+                                               rdfs:label "is enabled by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsInfluencedByCourseOfAction
+togaf:valueStreamIsInfluencedByCourseOfAction rdf:type owl:ObjectProperty ;
+                                              rdfs:label "is influenced by" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#valueStreamIsTriggeredByAndOrInvolvesActor
+togaf:valueStreamIsTriggeredByAndOrInvolvesActor rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "is triggered by and/or involves" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#workPackageDeliversCapability
+togaf:workPackageDeliversCapability rdf:type owl:ObjectProperty ;
+                                    rdfs:label "delivers" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Actor
+togaf:Actor rdf:type owl:Class ;
+            rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                            togaf:CoreContent ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty togaf:actorBelongsToOrganizationUnit ;
+                              owl:someValuesFrom togaf:OrganizationUnit
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty togaf:actorConsumesBusinessService ;
+                              owl:someValuesFrom togaf:BusinessService
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty togaf:actorDecomposesActor ;
+                              owl:someValuesFrom togaf:Actor
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty togaf:actorGeneratesAndOrResolvesEvent ;
+                              owl:someValuesFrom togaf:Event
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty togaf:actorIsDecomposedByActor ;
+                              owl:someValuesFrom togaf:Actor
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty togaf:actorPerformsAndOrInteractsWithFunction ;
+                              owl:someValuesFrom togaf:Function
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty togaf:actorPerformsTaskInRole ;
+                              owl:someValuesFrom togaf:Role
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty togaf:actorSuppliesOrConsumesDataEntity ;
+                              owl:someValuesFrom togaf:DataEntity
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty togaf:actorTriggersAndOrParticipatesInValueStream ;
+                              owl:someValuesFrom togaf:ValueStream
+                            ] ;
+            rdfs:comment "A person, organization, or system that has a role that initiates or interacts with activities; for example, a sales representative who travels to visit customers. Actors may be internal or external to an organization. In the automotive industry, an original equipment manufacturer would be considered an actor by an automotive dealership that interacts with its supply chain activities." ;
+            rdfs:label "Actor" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitecture
+togaf:ApplicationArchitecture rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( togaf:Architecture
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty togaf:hasComponent ;
+                                                                           owl:someValuesFrom togaf:ApplicationArchitectureComponent
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
+                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                owl:onProperty togaf:hasComponent ;
+                                                owl:someValuesFrom togaf:InformationSystemService
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty togaf:hasComponent ;
+                                                owl:someValuesFrom togaf:LogicalApplicationComponent
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty togaf:hasComponent ;
+                                                owl:someValuesFrom togaf:PhysicalApplicationComponent
+                                              ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitectureComponent
+togaf:ApplicationArchitectureComponent rdf:type owl:Class ;
+                                       rdfs:subClassOf togaf:ArchitectureComponent .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Architecture
+togaf:Architecture rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty togaf:hasComponent ;
+                                     owl:someValuesFrom togaf:ArchitectureComponent
+                                   ] ;
+                   owl:disjointWith togaf:ArchitectureComponent .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent
+togaf:ArchitectureComponent rdf:type owl:Class ;
+                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty togaf:associatedWith ;
+                                              owl:someValuesFrom togaf:AssociationObjects
+                                            ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#AssociationObjects
+togaf:AssociationObjects rdf:type owl:Class ;
+                         rdfs:subClassOf togaf:CoreContent ,
+                                         owl:Thing ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty togaf:associatedWith ;
+                                           owl:someValuesFrom togaf:ArchitectureComponent
+                                         ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Assumption
+togaf:Assumption rdf:type owl:Class ;
+                 rdfs:subClassOf togaf:AssociationObjects ;
+                 rdfs:comment "A statement of probable fact that has not been fully validated at this stage, due to external constraints. For example, it may be assumed that an existing application will support a certain set of functional requirements, although those requirements may not yet have been individually validated." ;
+                 rdfs:label "Assumption" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitecture
+togaf:BusinessArchitecture rdf:type owl:Class ;
+                           owl:equivalentClass [ owl:intersectionOf ( togaf:Architecture
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty togaf:hasComponent ;
+                                                                        owl:someValuesFrom togaf:BusinessArchitectureComponent
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ] ;
+                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:Actor
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:BusinessCapability
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:BusinessService
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:Contract
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:Control
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:CourseOfAction
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:Driver
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:Event
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:Function
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:Goal
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:Measure
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:Objective
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:OrganizationUnit
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:Process
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:Product
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:Role
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:ServiceQuality
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:hasComponent ;
+                                             owl:someValuesFrom togaf:ValueStream
+                                           ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent
+togaf:BusinessArchitectureComponent rdf:type owl:Class ;
+                                    rdfs:subClassOf togaf:ArchitectureComponent .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessCapability
+togaf:BusinessCapability rdf:type owl:Class ;
+                         rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                                         togaf:CoreContent ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty togaf:businessCapabilityDecomposesBusinessCapability ;
+                                           owl:someValuesFrom togaf:BusinessCapability
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty togaf:businessCapabilityEnablesValueStream ;
+                                           owl:someValuesFrom togaf:ValueStream
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty togaf:businessCapabilityIsDecomposedByBusinessCapability ;
+                                           owl:someValuesFrom togaf:BusinessCapability
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty togaf:businessCapabilityIsDeliveredByFunction ;
+                                           owl:someValuesFrom togaf:Function
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty togaf:businessCapabilityIsInfluencedByCourseOfAction ;
+                                           owl:someValuesFrom togaf:CourseOfAction
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty togaf:businessCapabilityIsOperationalizedByProcess ;
+                                           owl:someValuesFrom togaf:Process
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty togaf:businessCapabilityIsUsedByOrganizationUnit ;
+                                           owl:someValuesFrom togaf:OrganizationUnit
+                                         ] ;
+                         rdfs:comment "A particular ability that a business may possess or exchange to achieve a particular purpose." ;
+                         rdfs:label "Business Capability" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessService
+togaf:BusinessService rdf:type owl:Class ;
+                      rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                                      togaf:CoreContent ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceConsumesBusinessService ;
+                                        owl:someValuesFrom togaf:BusinessService
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceDecomposesBusinessService ;
+                                        owl:someValuesFrom togaf:BusinessService
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceIsConsumedByBusinessService ;
+                                        owl:someValuesFrom togaf:BusinessService
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceIsDecomposedByBusinessService ;
+                                        owl:someValuesFrom togaf:BusinessService
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceIsGovernedAndMeasuredByContract ;
+                                        owl:someValuesFrom togaf:Contract
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceIsImplementedOnLogicalTechnologyComponent ;
+                                        owl:someValuesFrom togaf:LogicalTechnologyComponent
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceIsOwnedAndGovernedByOrganizationUnit ;
+                                        owl:someValuesFrom togaf:OrganizationUnit
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceIsProvidedToActor ;
+                                        owl:someValuesFrom togaf:Actor
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceIsRealizedByAndOrSupportsProcess ;
+                                        owl:someValuesFrom togaf:Process
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceIsRealizedThroughInformationSystemService ;
+                                        owl:someValuesFrom togaf:InformationSystemService
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceIsRealizedThroughLogicalApplicationComponent ;
+                                        owl:someValuesFrom togaf:LogicalApplicationComponent
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceIsTrackedAgainstMeasure ;
+                                        owl:someValuesFrom togaf:Measure
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceMeetsServiceQuality ;
+                                        owl:someValuesFrom togaf:ServiceQuality
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceProvidesAndOrConsumesDataEntity ;
+                                        owl:someValuesFrom togaf:DataEntity
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceProvidesGovernedInterfaceToAccessFunction ;
+                                        owl:someValuesFrom togaf:Function
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty togaf:businessServiceResolvesEvent ;
+                                        owl:someValuesFrom togaf:Event
+                                      ] ;
+                      rdfs:comment "Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization." ;
+                      rdfs:label "Business Service" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Capability
+togaf:Capability rdf:type owl:Class ;
+                 rdfs:subClassOf togaf:ArchitectureComponent ,
+                                 togaf:CoreContent ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty togaf:capabilityIsDeliveredByWorkPackage ;
+                                   owl:someValuesFrom togaf:WorkPackage
+                                 ] ;
+                 rdfs:comment "A business-focused outcome that is delivered by the completion of one or more work packages. Using a capability-based planning approach, change activities can be sequenced and grouped in order to provide continuous and incremental business value." ;
+                 rdfs:label "Capability" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Constraint
+togaf:Constraint rdf:type owl:Class ;
+                 rdfs:subClassOf togaf:AssociationObjects ;
+                 rdfs:comment "An external factor that prevents an organization from pursuing particular approaches to meet its goals. For example, customer data is not harmonized within the organization, regionally or nationally, constraining the organization's ability to offer effective customer service." ;
+                 rdfs:label "Constraint" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification
+togaf:ContentClassification rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Contract
+togaf:Contract rdf:type owl:Class ;
+               rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                               togaf:GovernanceExtension ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty togaf:contractGovernsAndMeasuresBusinessService ;
+                                 owl:someValuesFrom togaf:BusinessService
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty togaf:contractMeetsServiceQuality ;
+                                 owl:someValuesFrom togaf:ServiceQuality
+                               ] ;
+               rdfs:comment "An agreement between a service consumer and a service provider that establishes functional and non-functional parameters for interaction." ;
+               rdfs:label "Contract" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Control
+togaf:Control rdf:type owl:Class ;
+              rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                              togaf:ProcessModelingExtension ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:controlEnsuresCorrectOperationOfProcess ;
+                                owl:someValuesFrom togaf:Process
+                              ] ;
+              rdfs:comment "A decision-making step with accompanying decision logic used to determine execution approach for a process or to ensure that a process complies with governance criteria. For example, a sign-off control on the purchase request processing process that checks whether the total value of the request is within the sign-off limits of the requester, or whether it needs escalating to higher authority." ;
+              rdfs:label "Control" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent
+togaf:CoreContent rdf:type owl:Class ;
+                  rdfs:subClassOf togaf:ContentClassification .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CourseOfAction
+togaf:CourseOfAction rdf:type owl:Class ;
+                     rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                                     togaf:CoreContent ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty togaf:courseOfActionInfluencesBusinessCapability ;
+                                       owl:someValuesFrom togaf:BusinessCapability
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty togaf:courseOfActionInfluencesFunction ;
+                                       owl:someValuesFrom togaf:Function
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty togaf:courseOfActionInfluencesValueStream ;
+                                       owl:someValuesFrom togaf:ValueStream
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty togaf:courseOfActionRealizesGoal ;
+                                       owl:someValuesFrom togaf:Goal
+                                     ] ;
+                     rdfs:comment "Direction and focus provided by strategic goals and objectives, often to deliver the value proposition characterized in the business model." ;
+                     rdfs:label "Course of Action" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitecture
+togaf:DataArchitecture rdf:type owl:Class ;
+                       owl:equivalentClass [ owl:intersectionOf ( togaf:Architecture
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty togaf:hasComponent ;
+                                                                    owl:someValuesFrom togaf:DataArchitectureComponent
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty togaf:hasComponent ;
+                                         owl:someValuesFrom togaf:DataEntity
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty togaf:hasComponent ;
+                                         owl:someValuesFrom togaf:LogicalDataComponent
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty togaf:hasComponent ;
+                                         owl:someValuesFrom togaf:PhysicalDataComponent
+                                       ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitectureComponent
+togaf:DataArchitectureComponent rdf:type owl:Class ;
+                                rdfs:subClassOf togaf:ArchitectureComponent .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataEntity
+togaf:DataEntity rdf:type owl:Class ;
+                 rdfs:subClassOf togaf:CoreContent ,
+                                 togaf:DataArchitectureComponent ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty togaf:dataEntityDecomposesDataEntity ;
+                                   owl:someValuesFrom togaf:DataEntity
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty togaf:dataEntityIsAccessedAndUpdatedThroughBusinessService ;
+                                   owl:someValuesFrom togaf:BusinessService
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty togaf:dataEntityIsDecomposedByDataEntity ;
+                                   owl:someValuesFrom togaf:DataEntity
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty togaf:dataEntityIsSuppliedOrConsumedByActor ;
+                                   owl:someValuesFrom togaf:Actor
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty togaf:dataEntityRelatesToDataEntity ;
+                                   owl:someValuesFrom togaf:DataEntity
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty togaf:dataEntityResidesWithinLogicalDataComponent ;
+                                   owl:someValuesFrom togaf:LogicalDataComponent
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty togaf:dataEntityUsesInformationSystemService ;
+                                   owl:someValuesFrom togaf:InformationSystemService
+                                 ] ;
+                 rdfs:comment "An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations." ;
+                 rdfs:label "Data Entity" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataModelingExtension
+togaf:DataModelingExtension rdf:type owl:Class ;
+                            rdfs:subClassOf togaf:ContentClassification .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Driver
+togaf:Driver rdf:type owl:Class ;
+             rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                             togaf:MotivationExtension ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty togaf:driverCreatesGoal ;
+                               owl:someValuesFrom togaf:Goal
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty togaf:driverDecomposesDriver ;
+                               owl:someValuesFrom togaf:Driver
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty togaf:driverIsDecomposedByDriver ;
+                               owl:someValuesFrom togaf:Driver
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty togaf:driverMotivatesOrganizationUnit ;
+                               owl:someValuesFrom togaf:OrganizationUnit
+                             ] ;
+             rdfs:comment "An external or internal condition that motivates the organization to define its goals. An example of an external driver is a change in regulation or compliance rules which, for example, require changes to the way an organization operates; i.e., Sarbanes-Oxley in the US." ;
+             rdfs:label "Driver" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Event
+togaf:Event rdf:type owl:Class ;
+            rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                            togaf:ProcessModelingExtension ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty togaf:eventIsGeneratedAndOrResolvedByActor ;
+                              owl:someValuesFrom togaf:Actor
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty togaf:eventIsResolvedAndOrGeneratedByProcess ;
+                              owl:someValuesFrom togaf:Process
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty togaf:eventIsResolvedByBusinessService ;
+                              owl:someValuesFrom togaf:BusinessService
+                            ] ;
+            rdfs:comment "An organizational state change that triggers processing events; may originate from inside or outside the organization and may be resolved inside or outside the organization." ;
+            rdfs:label "Event" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Function
+togaf:Function rdf:type owl:Class ;
+               rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                               togaf:CoreContent ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty togaf:functionCommunicatesWithFunction ;
+                                 owl:someValuesFrom togaf:Function
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty togaf:functionDecomposesFunction ;
+                                 owl:someValuesFrom togaf:Function
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty togaf:functionDeliversBusinessCapability ;
+                                 owl:someValuesFrom togaf:BusinessCapability
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty togaf:functionIsBoundedByBusinessService ;
+                                 owl:someValuesFrom togaf:BusinessService
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty togaf:functionIsDecomposedByFunction ;
+                                 owl:someValuesFrom togaf:Function
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty togaf:functionIsInfluencedByCourseOfAction ;
+                                 owl:someValuesFrom togaf:CourseOfAction
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty togaf:functionIsOwnedByOrganizationUnit ;
+                                 owl:someValuesFrom togaf:OrganizationUnit
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty togaf:functionIsPerformedByAndOrSupportsActor ;
+                                 owl:someValuesFrom togaf:Actor
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty togaf:functionIsRealizedByAndOrSupportsProcess ;
+                                 owl:someValuesFrom togaf:Process
+                               ] ;
+               rdfs:comment "Delivers business capabilities closely aligned to an organization, but not necessarily explicitly governed by the organization. Also referred to as \"business function\"." ;
+               rdfs:label "Function" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Gap
+togaf:Gap rdf:type owl:Class ;
+          rdfs:subClassOf togaf:AssociationObjects ;
+          rdfs:comment "A statement of difference between two states. Used in the context of gap analysis, where the difference between the Baseline and Target Architecture is identified." ;
+          rdfs:label "Gap" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Goal
+togaf:Goal rdf:type owl:Class ;
+           rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                           togaf:MotivationExtension ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty togaf:goalAddressesDriver ;
+                             owl:someValuesFrom togaf:Driver
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty togaf:goalDecomposesGoal ;
+                             owl:someValuesFrom togaf:Goal
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty togaf:goalIsDecomposedByGoal ;
+                             owl:someValuesFrom togaf:Goal
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty togaf:goalIsRealizedByCourseOfAction ;
+                             owl:someValuesFrom togaf:CourseOfAction
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty togaf:goalIsRealizedThroughObjective ;
+                             owl:someValuesFrom togaf:Objective
+                           ] ;
+           rdfs:comment "A high-level statement of intent or direction for an organization. Typically used to measure success of an organization." ;
+           rdfs:label "Goal" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#GovernanceExtension
+togaf:GovernanceExtension rdf:type owl:Class ;
+                          rdfs:subClassOf togaf:ContentClassification .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InformationSystemService
+togaf:InformationSystemService rdf:type owl:Class ;
+                               rdfs:subClassOf togaf:ApplicationArchitectureComponent ,
+                                               togaf:ServicesExtension ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty togaf:informationSystemServiceIsRealizedThroughLogicalApplicationComponent ;
+                                                 owl:someValuesFrom togaf:LogicalApplicationComponent
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty togaf:informationSystemServiceIsServedByTechnologyService ;
+                                                 owl:someValuesFrom togaf:TechnologyService
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty togaf:informationSystemServiceIsUsedByDataEntity ;
+                                                 owl:someValuesFrom togaf:DataEntity
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty togaf:informationSystemServiceRealizesBusinessService ;
+                                                 owl:someValuesFrom togaf:BusinessService
+                                               ] ;
+                               rdfs:comment "The automated elements of a business service. An information system service may deliver or support part or all of one or more business services." ;
+                               rdfs:label "Information System Service" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InfrastructureConsolidationExtension
+togaf:InfrastructureConsolidationExtension rdf:type owl:Class ;
+                                           rdfs:subClassOf togaf:ContentClassification .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Location
+togaf:Location rdf:type owl:Class ;
+               rdfs:subClassOf togaf:AssociationObjects ;
+               rdfs:comment "A place where business activity takes place and can be hierarchically decomposed." ;
+               rdfs:label "Location" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalApplicationComponent
+togaf:LogicalApplicationComponent rdf:type owl:Class ;
+                                  rdfs:subClassOf togaf:ApplicationArchitectureComponent ,
+                                                  togaf:CoreContent ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty togaf:logicalApplicationComponentCommunicatesWithLogicalApplicationComponent ;
+                                                    owl:someValuesFrom togaf:LogicalApplicationComponent
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty togaf:logicalApplicationComponentDecomposesLogicalApplicationComponent ;
+                                                    owl:someValuesFrom togaf:LogicalApplicationComponent
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty togaf:logicalApplicationComponentImplementsBusinessService ;
+                                                    owl:someValuesFrom togaf:BusinessService
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty togaf:logicalApplicationComponentImplementsInformationSystemService ;
+                                                    owl:someValuesFrom togaf:InformationSystemService
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty togaf:logicalApplicationComponentIsDecomposedByLogicalApplicationComponent ;
+                                                    owl:someValuesFrom togaf:LogicalApplicationComponent
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty togaf:logicalApplicationComponentIsRealizedByPhysicalApplicationComponent ;
+                                                    owl:someValuesFrom togaf:PhysicalApplicationComponent
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty togaf:logicalApplicationComponentIsServedByLogicalTechnologyComponent ;
+                                                    owl:someValuesFrom togaf:LogicalTechnologyComponent
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty togaf:logicalApplicationComponentIsUsedByLogicalDataComponent ;
+                                                    owl:someValuesFrom togaf:LogicalDataComponent
+                                                  ] ;
+                                  rdfs:comment "An encapsulation of application functionality that is independent of a particular implementation. For example, the classification of all purchase request processing applications implemented in an enterprise." ;
+                                  rdfs:label "Logical Application Component" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalDataComponent
+togaf:LogicalDataComponent rdf:type owl:Class ;
+                           rdfs:subClassOf togaf:DataArchitectureComponent ,
+                                           togaf:DataModelingExtension ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:logicalDataComponentEncapsulatesDataEntity ;
+                                             owl:someValuesFrom togaf:DataEntity
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:logicalDataComponentIsRealizedByPhysicalDataComponent ;
+                                             owl:someValuesFrom togaf:PhysicalDataComponent
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty togaf:logicalDataComponentUsesLogicalApplicationComponent ;
+                                             owl:someValuesFrom togaf:LogicalApplicationComponent
+                                           ] ;
+                           rdfs:comment "A boundary zone that encapsulates related data entities to form a logical location to be held; for example, external procurement information." ;
+                           rdfs:label "Logical Data Component" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#LogicalTechnologyComponent
+togaf:LogicalTechnologyComponent rdf:type owl:Class ;
+                                 rdfs:subClassOf togaf:InfrastructureConsolidationExtension ,
+                                                 togaf:TechnologyArchitectureComponent ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty togaf:logicalTechnologyComponentDecomposesLogicalTechnologyComponent ;
+                                                   owl:someValuesFrom togaf:LogicalTechnologyComponent
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty togaf:logicalTechnologyComponentIsDecomposedByLogicalTechnologyComponent ;
+                                                   owl:someValuesFrom togaf:LogicalTechnologyComponent
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty togaf:logicalTechnologyComponentIsDependentOnLogicalTechnologyComponent ;
+                                                   owl:someValuesFrom togaf:LogicalTechnologyComponent
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty togaf:logicalTechnologyComponentIsRealizedByPhysicalTechnologyComponent ;
+                                                   owl:someValuesFrom togaf:PhysicalTechnologyComponent
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty togaf:logicalTechnologyComponentProvidesPlatformForBusinessService ;
+                                                   owl:someValuesFrom togaf:BusinessService
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty togaf:logicalTechnologyComponentServesLogicalApplicationComponent ;
+                                                   owl:someValuesFrom togaf:LogicalApplicationComponent
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty togaf:logicalTechnologyComponentSuppliesTechnologyService ;
+                                                   owl:someValuesFrom togaf:TechnologyService
+                                                 ] ;
+                                 rdfs:comment "An encapsulation of technology infrastructure that is independent of a particular product. A class of technology product; for example, supply chain management software as part of an Enterprise Resource Planning (ERP) suite, or a Commercial Off-The-Shelf (COTS) purchase request processing enterprise service." ;
+                                 rdfs:label "Logical Technology Component" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Measure
+togaf:Measure rdf:type owl:Class ;
+              rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                              togaf:GovernanceExtension ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:measureDecomposesMeasure ;
+                                owl:someValuesFrom togaf:Measure
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:measureIsDecomposedByMeasure ;
+                                owl:someValuesFrom togaf:Measure
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:measureSetsPerformanceCriteriaForBusinessService ;
+                                owl:someValuesFrom togaf:BusinessService
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:measureSetsPerformanceCriteriaForObjective ;
+                                owl:someValuesFrom togaf:Objective
+                              ] ;
+              rdfs:comment "An indicator or factor that can be tracked, usually on an ongoing basis, to determine success or alignment with objectives and goals." ;
+              rdfs:label "Measure" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#MotivationExtension
+togaf:MotivationExtension rdf:type owl:Class ;
+                          rdfs:subClassOf togaf:ContentClassification .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Objective
+togaf:Objective rdf:type owl:Class ;
+                rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                                togaf:MotivationExtension ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty togaf:objectiveDecomposesObjective ;
+                                  owl:someValuesFrom togaf:Objective
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty togaf:objectiveIsDecomposedByObjective ;
+                                  owl:someValuesFrom togaf:Objective
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty togaf:objectiveIsTrackedAgainstMeasure ;
+                                  owl:someValuesFrom togaf:Measure
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty togaf:objectiveRealizesGoal ;
+                                  owl:someValuesFrom togaf:Goal
+                                ] ;
+                rdfs:comment "A time-bounded milestone for an organization used to demonstrate progress towards a goal; for example, \"Increase capacity utilization by 30% by the end of 2019 to support the planned increase in market share\"." ;
+                rdfs:label "Objective" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#OrganizationUnit
+togaf:OrganizationUnit rdf:type owl:Class ;
+                       rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                                       togaf:CoreContent ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty togaf:organizationUnitContainsActor ;
+                                         owl:someValuesFrom togaf:Actor
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty togaf:organizationUnitDecomposesOrganizationUnit ;
+                                         owl:someValuesFrom togaf:OrganizationUnit
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty togaf:organizationUnitInvolvesProcess ;
+                                         owl:someValuesFrom togaf:Process
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty togaf:organizationUnitIsDecomposedByOrganizationUnit ;
+                                         owl:someValuesFrom togaf:OrganizationUnit
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty togaf:organizationUnitIsMotivatedByDriver ;
+                                         owl:someValuesFrom togaf:Driver
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty togaf:organizationUnitOwnsAndGovernsBusinessService ;
+                                         owl:someValuesFrom togaf:BusinessService
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty togaf:organizationUnitOwnsFunction ;
+                                         owl:someValuesFrom togaf:Function
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty togaf:organizationUnitProducesProduct ;
+                                         owl:someValuesFrom togaf:Product
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty togaf:organizationUnitUsesBusinessCapability ;
+                                         owl:someValuesFrom togaf:BusinessCapability
+                                       ] ;
+                       rdfs:comment "A self-contained unit of resources with goals, objectives, and measures. Organization units may include external parties and business partner organizations." ;
+                       rdfs:label "Organization Unit" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalApplicationComponent
+togaf:PhysicalApplicationComponent rdf:type owl:Class ;
+                                   rdfs:subClassOf togaf:ApplicationArchitectureComponent ,
+                                                   togaf:InfrastructureConsolidationExtension ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty togaf:physicalApplicationComponentCommunicatesWithPhysicalApplicationComponent ;
+                                                     owl:someValuesFrom togaf:PhysicalApplicationComponent
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty togaf:physicalApplicationComponentDecomposesPhysicalApplicationComponent ;
+                                                     owl:someValuesFrom togaf:PhysicalApplicationComponent
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty togaf:physicalApplicationComponentIsDecomposedByPhysicalApplicationComponent ;
+                                                     owl:someValuesFrom togaf:PhysicalApplicationComponent
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty togaf:physicalApplicationComponentIsServedByPhysicalTechnologyComponent ;
+                                                     owl:someValuesFrom togaf:PhysicalTechnologyComponent
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty togaf:physicalApplicationComponentIsUsedByPhysicalDataComponent ;
+                                                     owl:someValuesFrom togaf:PhysicalDataComponent
+                                                   ] ,
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty togaf:physicalApplicationComponentRealizesLogicalApplicationComponent ;
+                                                     owl:someValuesFrom togaf:LogicalApplicationComponent
+                                                   ] ;
+                                   rdfs:comment "An application, application module, application service, or other deployable component of functionality. For example, a configured and deployed instance of a Commercial Off-The-Shelf (COTS) Enterprise Resource Planning (ERP) supply chain management application." ;
+                                   rdfs:label "Physical Application Component" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalDataComponent
+togaf:PhysicalDataComponent rdf:type owl:Class ;
+                            rdfs:subClassOf togaf:DataArchitectureComponent ,
+                                            togaf:DataModelingExtension ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty togaf:physicalDataComponentDecomposesPhysicalDataComponent ;
+                                              owl:someValuesFrom togaf:PhysicalDataComponent
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty togaf:physicalDataComponentIsDecomposedByPhysicalDataComponent ;
+                                              owl:someValuesFrom togaf:PhysicalDataComponent
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty togaf:physicalDataComponentRealizesLogicalDataComponent ;
+                                              owl:someValuesFrom togaf:LogicalDataComponent
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty togaf:physicalDataComponentUsesPhysicalApplicationComponent ;
+                                              owl:someValuesFrom togaf:PhysicalApplicationComponent
+                                            ] ;
+                            rdfs:comment "A boundary zone that encapsulates related data entities to form a physical location to be held. For example, a purchase order business object, comprising purchase order header and item business object nodes." ;
+                            rdfs:label "Physical Data Component" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalTechnologyComponent
+togaf:PhysicalTechnologyComponent rdf:type owl:Class ;
+                                  rdfs:subClassOf togaf:CoreContent ,
+                                                  togaf:TechnologyArchitectureComponent ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty togaf:physicalTechnologyComponentDecomposesPhysicalTechnologyComponent ;
+                                                    owl:someValuesFrom togaf:PhysicalTechnologyComponent
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty togaf:physicalTechnologyComponentIsDecomposedByPhysicalTechnologyComponent ;
+                                                    owl:someValuesFrom togaf:PhysicalTechnologyComponent
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty togaf:physicalTechnologyComponentIsDependentOnPhysicalTechnologyComponent ;
+                                                    owl:someValuesFrom togaf:PhysicalTechnologyComponent
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty togaf:physicalTechnologyComponentRealizesLogicalTechnologyComponent ;
+                                                    owl:someValuesFrom togaf:LogicalTechnologyComponent
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty togaf:physicalTechnologyComponentServesPhysicalApplicationComponent ;
+                                                    owl:someValuesFrom togaf:PhysicalApplicationComponent
+                                                  ] ;
+                                  rdfs:comment "A specific technology infrastructure product or technology infrastructure product instance. For example, a particular product version of a Commercial Off-The-Shelf (COTS) solution, or a specific brand and version of server." ;
+                                  rdfs:label "Physical Technology Component" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Principle
+togaf:Principle rdf:type owl:Class ;
+                rdfs:subClassOf togaf:AssociationObjects ;
+                rdfs:comment "A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance." ;
+                rdfs:label "Principle" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Process
+togaf:Process rdf:type owl:Class ;
+              rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                              togaf:CoreContent ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:processDecomposesAndOrOrchestratesBusinessService ;
+                                owl:someValuesFrom togaf:BusinessService
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:processDecomposesAndOrOrchestratesFunction ;
+                                owl:someValuesFrom togaf:Function
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:processDecomposesProcess ;
+                                owl:someValuesFrom togaf:Process
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:processInvolvesOrganizationUnit ;
+                                owl:someValuesFrom togaf:OrganizationUnit
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:processIsDecomposedByProcess ;
+                                owl:someValuesFrom togaf:Process
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:processIsGuidedByControl ;
+                                owl:someValuesFrom togaf:Control
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:processIsPerformedByAndOrInvolvesRole ;
+                                owl:someValuesFrom togaf:Role
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:processOperationalizesBusinessCapability ;
+                                owl:someValuesFrom togaf:BusinessCapability
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:processPrecedesOrFollowsProcess ;
+                                owl:someValuesFrom togaf:Process
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:processProducesProduct ;
+                                owl:someValuesFrom togaf:Product
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:processResolvesAndOrGeneratesEvent ;
+                                owl:someValuesFrom togaf:Event
+                              ] ;
+              rdfs:comment "A process represents flow of control between or within functions and/or services (depends on the granularity of definition). Processes represent a sequence of activities that together achieve a specified outcome, can be decomposed into sub-processes, and can show operation of a function or service (at next level of detail). Processes may also be used to link or compose organizations, functions, services, and processes." ;
+              rdfs:label "Process" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ProcessModelingExtension
+togaf:ProcessModelingExtension rdf:type owl:Class ;
+                               rdfs:subClassOf togaf:ContentClassification .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Product
+togaf:Product rdf:type owl:Class ;
+              rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                              togaf:ProcessModelingExtension ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:productIsProducedByOrganizationUnit ;
+                                owl:someValuesFrom togaf:OrganizationUnit
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty togaf:productIsProducedByProcess ;
+                                owl:someValuesFrom togaf:Process
+                              ] ;
+              rdfs:comment "Output generated by the business. The business product of the execution of a process." ;
+              rdfs:label "Product" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Requirement
+togaf:Requirement rdf:type owl:Class ;
+                  rdfs:subClassOf togaf:AssociationObjects ;
+                  rdfs:comment "A quantitative statement of business need that must be met by a particular architecture or work package." ;
+                  rdfs:label "Requirement" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#Role
+togaf:Role rdf:type owl:Class ;
+           rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                           togaf:CoreContent ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty togaf:roleDecomposesRole ;
+                             owl:someValuesFrom togaf:Role
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty togaf:roleIsDecomposedByRole ;
+                             owl:someValuesFrom togaf:Role
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty togaf:roleIsPerformedByActor ;
+                             owl:someValuesFrom togaf:Actor
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty togaf:rolePerformsAndOrParticipatesInProcess ;
+                             owl:someValuesFrom togaf:Process
+                           ] ;
+           rdfs:comment "The usual or expected function of an actor, or the part somebody or something plays in a particular action or event. An actor may have a number of roles." ;
+           rdfs:label "Role" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServiceQuality
+togaf:ServiceQuality rdf:type owl:Class ;
+                     rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                                     togaf:GovernanceExtension ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty togaf:serviceQualityAppliesToBusinessService ;
+                                       owl:someValuesFrom togaf:BusinessService
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty togaf:serviceQualityAppliesToContract ;
+                                       owl:someValuesFrom togaf:Contract
+                                     ] ;
+                     rdfs:comment "A preset configuration of non-functional attributes that may be assigned to a service or service contract." ;
+                     rdfs:label "Service Quality" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServicesExtension
+togaf:ServicesExtension rdf:type owl:Class ;
+                        rdfs:subClassOf togaf:ContentClassification .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitecture
+togaf:TechnologyArchitecture rdf:type owl:Class ;
+                             owl:equivalentClass [ owl:intersectionOf ( togaf:Architecture
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty togaf:hasComponent ;
+                                                                          owl:someValuesFrom togaf:TechnologyArchitectureComponent
+                                                                        ]
+                                                                      ) ;
+                                                   rdf:type owl:Class
+                                                 ] ;
+                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                               owl:onProperty togaf:hasComponent ;
+                                               owl:someValuesFrom togaf:LogicalTechnologyComponent
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty togaf:hasComponent ;
+                                               owl:someValuesFrom togaf:PhysicalTechnologyComponent
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty togaf:hasComponent ;
+                                               owl:someValuesFrom togaf:TechnologyService
+                                             ] .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitectureComponent
+togaf:TechnologyArchitectureComponent rdf:type owl:Class ;
+                                      rdfs:subClassOf togaf:ArchitectureComponent .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyService
+togaf:TechnologyService rdf:type owl:Class ;
+                        rdfs:subClassOf togaf:CoreContent ,
+                                        togaf:TechnologyArchitectureComponent ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty togaf:technologyServiceIsSuppliedByLogicalTechnologyComponent ;
+                                          owl:someValuesFrom togaf:LogicalTechnologyComponent
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty togaf:technologyServiceServesInformationSystemService ;
+                                          owl:someValuesFrom togaf:InformationSystemService
+                                        ] ;
+                        rdfs:comment "A technical capability required to provide enabling infrastructure that supports the delivery of applications." ;
+                        rdfs:label "Technology Service" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ValueStream
+togaf:ValueStream rdf:type owl:Class ;
+                  rdfs:subClassOf togaf:BusinessArchitectureComponent ,
+                                  togaf:CoreContent ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty togaf:valueStreamIsEnabledByBusinessCapability ;
+                                    owl:someValuesFrom togaf:BusinessCapability
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty togaf:valueStreamIsInfluencedByCourseOfAction ;
+                                    owl:someValuesFrom togaf:CourseOfAction
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty togaf:valueStreamIsTriggeredByAndOrInvolvesActor ;
+                                    owl:someValuesFrom togaf:Actor
+                                  ] ;
+                  rdfs:comment "A representation of an end-to-end collection of value-adding activities that create an overall result for a customer, stakeholder, or end-user." ;
+                  rdfs:label "Value Stream" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#WorkPackage
+togaf:WorkPackage rdf:type owl:Class ;
+                  rdfs:subClassOf togaf:AssociationObjects ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty togaf:workPackageDeliversCapability ;
+                                    owl:someValuesFrom togaf:Capability
+                                  ] ;
+                  rdfs:comment "A set of actions identified to achieve one or more objectives for the business. A work package can be a part of a project, a complete project, or a program." ;
+                  rdfs:label "Work Package" .
+
+
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( togaf:Actor
+                togaf:BusinessCapability
+                togaf:BusinessService
+                togaf:Contract
+                togaf:Control
+                togaf:CourseOfAction
+                togaf:Driver
+                togaf:Event
+                togaf:Function
+                togaf:Goal
+                togaf:Measure
+                togaf:Objective
+                togaf:OrganizationUnit
+                togaf:Process
+                togaf:Product
+                togaf:Role
+                togaf:ServiceQuality
+                togaf:ValueStream
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( togaf:ApplicationArchitecture
+                togaf:BusinessArchitecture
+                togaf:DataArchitecture
+                togaf:TechnologyArchitecture
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( togaf:ApplicationArchitectureComponent
+                togaf:BusinessArchitectureComponent
+                togaf:Capability
+                togaf:DataArchitectureComponent
+                togaf:TechnologyArchitectureComponent
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( togaf:Assumption
+                togaf:Constraint
+                togaf:Gap
+                togaf:Location
+                togaf:Principle
+                togaf:Requirement
+                togaf:WorkPackage
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( togaf:CoreContent
+                togaf:DataModelingExtension
+                togaf:GovernanceExtension
+                togaf:InfrastructureConsolidationExtension
+                togaf:MotivationExtension
+                togaf:ProcessModelingExtension
+                togaf:ServicesExtension
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( togaf:DataEntity
+                togaf:LogicalDataComponent
+                togaf:PhysicalDataComponent
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( togaf:InformationSystemService
+                togaf:LogicalApplicationComponent
+                togaf:PhysicalApplicationComponent
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( togaf:LogicalTechnologyComponent
+                togaf:PhysicalTechnologyComponent
+                togaf:TechnologyService
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

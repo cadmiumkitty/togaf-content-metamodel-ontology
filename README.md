@@ -19,6 +19,10 @@ This is version 2.0 of the TOGAF Content Metamodel ontology. It is based on the 
 
 Given low prior adoption of the ontology and disruptive changes to many classes disjoint statements due to Location moving to General Entities, the decision is to adopt entirely new Ontology URI for TOGAF 9.2. For earlier discussion on ontology versioning see (http://ontologydesignpatterns.org/wiki/Community:Versioning_and_URIs) and (https://www.w3.org/TR/owl-guide/#OntologyVersioning).
 
+## Taxonomy Design Choices
+
+Both JSON-LD and Turtle serializations are provided out of the box to improve adoption.
+
 ## Prior Work
 
 Original from https://sites.google.com/site/ontologyprojects/home/togaf-core-content-metamodel is used with permission from Aurona Gerber. Subsequent modifications are released with Creative Commons Attribution-ShareAlike 4.0 International license.
@@ -27,7 +31,17 @@ Based on the paper [Towards the Formalisation of the TOGAF Content Metamodel usi
 
 A regulatory impact analysis solution based on the ontology was presented at the [Semantic Web London](https://www.meetup.com/semantic-web-london/) meetup. Source code is available on https://github.com/cadmiumkitty/ontologies-for-enterprise-architecture, and the slides are on https://www.slideshare.net/EugeneMorozov/documenting-enterprise-architectures-using-ontologies.
 
+Taxonomy mapping and transformation is based on [MoneyAggVoc](https://cadmiumkitty.github.io/moneyaggvoc/).
+
+## Tools
+
+Ontology can be viewed in [TopBraid EDG](https://www.topquadrant.com/products/topbraid-enterprise-data-governance/) and [WebProtege](https://webprotege.stanford.edu) once you create an account.
+
+ 1. [TOGAF 9.2 Content Metamodel Ontology](https://webprotege.stanford.edu/#projects/23caff5b-4f1a-48fd-a28a-b4e33770a8cb/edit/Classes)
+ 1. [TOGAF 9.1 Content Metamodel Ontology](https://webprotege.stanford.edu/#projects/bb40a6e0-2f3d-46a1-bffb-6a84db5ce7df/edit/Classes)
+
+Taxonomy import and visualization has been tested with [VocBench 3](http://vocbench.uniroma2.it/) and [TopBraid EDG](https://www.topquadrant.com/products/topbraid-enterprise-data-governance/).
+
 ## Immediate Next Steps
 
- 1. Include the SKOS version of TOGAF concepts.
- 1. Add [Semantic MediaWiki](https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki) mappings to the repository.
+Add [Semantic MediaWiki](https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki) mappings to the repository.
