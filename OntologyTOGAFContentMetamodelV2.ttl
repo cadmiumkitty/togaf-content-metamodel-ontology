@@ -215,13 +215,6 @@ togaf:capabilityIsDeliveredByWorkPackage rdf:type owl:ObjectProperty ;
                                          rdfs:label "is delivered by" .
 
 
-###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#category
-togaf:category rdf:type owl:ObjectProperty ;
-               rdfs:domain togaf:ContentClassification ;
-               rdfs:comment "User-definable categorization taxonomy for each metamodel entity." ;
-               rdfs:label "category" .
-
-
 ###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#contractGovernsAndMeasuresBusinessService
 togaf:contractGovernsAndMeasuresBusinessService rdf:type owl:ObjectProperty ;
                                                 rdfs:label "governs and measures" .
@@ -414,6 +407,12 @@ togaf:goalIsRealizedByCourseOfAction rdf:type owl:ObjectProperty ;
 togaf:goalIsRealizedThroughObjective rdf:type owl:ObjectProperty ;
                                      owl:inverseOf togaf:objectiveRealizesGoal ;
                                      rdfs:label "is realized through" .
+
+
+###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasCategory
+togaf:hasCategory rdf:type owl:ObjectProperty ;
+                  rdfs:comment "User-definable categorization taxonomy for each metamodel entity." ;
+                  rdfs:label "has category" .
 
 
 ###  http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasComponent
@@ -935,6 +934,10 @@ togaf:ArchitectureComponent rdf:type owl:Class ;
                             rdfs:subClassOf [ rdf:type owl:Restriction ;
                                               owl:onProperty togaf:associatedWith ;
                                               owl:someValuesFrom togaf:AssociationObjects
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty togaf:hasCategory ;
+                                              owl:someValuesFrom owl:Thing
                                             ] .
 
 
@@ -945,6 +948,10 @@ togaf:AssociationObjects rdf:type owl:Class ;
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty togaf:associatedWith ;
                                            owl:someValuesFrom togaf:ArchitectureComponent
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty togaf:hasCategory ;
+                                           owl:someValuesFrom owl:Thing
                                          ] .
 
 

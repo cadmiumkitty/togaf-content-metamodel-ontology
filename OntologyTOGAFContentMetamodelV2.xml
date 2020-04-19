@@ -327,16 +327,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#category -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#category">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
-        <rdfs:comment>User-definable categorization taxonomy for each metamodel entity.</rdfs:comment>
-        <rdfs:label>category</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#contractGovernsAndMeasuresBusinessService -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#contractGovernsAndMeasuresBusinessService">
@@ -632,6 +622,15 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#goalIsRealizedThroughObjective">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#objectiveRealizesGoal"/>
         <rdfs:label>is realized through</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasCategory">
+        <rdfs:comment>User-definable categorization taxonomy for each metamodel entity.</rdfs:comment>
+        <rdfs:label>has category</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1447,6 +1446,12 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#AssociationObjects"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1460,6 +1465,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#associatedWith"/>
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#hasCategory"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
