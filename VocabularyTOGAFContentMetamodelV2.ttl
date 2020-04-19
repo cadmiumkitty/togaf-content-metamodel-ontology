@@ -1,0 +1,372 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix togaf: <http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#> .
+@prefix togafvoc: <http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+togafvoc:assumption a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Assumption ;
+    skos:broader togafvoc:general_entity ;
+    skos:definition "A statement of probable fact that has not been fully validated at this stage, due to external constraints. For example, it may be assumed that an existing application will support a certain set of functional requirements, although those requirements may not yet have been individually validated." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Assumption" .
+
+togafvoc:business_capability a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:BusinessCapability ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "A particular ability that a business may possess or exchange to achieve a particular purpose." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Business Capability" .
+
+togafvoc:business_service a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:BusinessService ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Business Service" .
+
+togafvoc:capability a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Capability ;
+    skos:broader togafvoc:general_entity ;
+    skos:definition "A business-focused outcome that is delivered by the completion of one or more work packages. Using a capability-based planning approach, change activities can be sequenced and grouped in order to provide continuous and incremental business value." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Capability" .
+
+togafvoc:constraint a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Constraint ;
+    skos:broader togafvoc:general_entity ;
+    skos:definition "An external factor that prevents an organization from pursuing particular approaches to meet its goals. For example, customer data is not harmonized within the organization, regionally or nationally, constraining the organization's ability to offer effective customer service." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Constraint" .
+
+togafvoc:contract a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Contract ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "An agreement between a service consumer and a service provider that establishes functional and non-functional parameters for interaction." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Contract" .
+
+togafvoc:control a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Control ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "A decision-making step with accompanying decision logic used to determine execution approach for a process or to ensure that a process complies with governance criteria. For example, a sign-off control on the purchase request processing process that checks whether the total value of the request is within the sign-off limits of the requester, or whether it needs escalating to higher authority." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Control" .
+
+togafvoc:course_of_action a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:CourseofAction ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "Direction and focus provided by strategic goals and objectives, often to deliver the value proposition characterized in the business model." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Course of Action" .
+
+togafvoc:data_entity a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:DataEntity ;
+    skos:broader togafvoc:data_architecture_component ;
+    skos:definition "An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Data Entity" .
+
+togafvoc:driver a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Driver ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "An external or internal condition that motivates the organization to define its goals. An example of an external driver is a change in regulation or compliance rules which, for example, require changes to the way an organization operates; i.e., Sarbanes-Oxley in the US." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Driver" .
+
+togafvoc:event a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Event ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "An organizational state change that triggers processing events; may originate from inside or outside the organization and may be resolved inside or outside the organization." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Event" .
+
+togafvoc:function a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Function ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "Delivers business capabilities closely aligned to an organization, but not necessarily explicitly governed by the organization. Also referred to as \"business function\"." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Function" .
+
+togafvoc:gap a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Gap ;
+    skos:broader togafvoc:general_entity ;
+    skos:definition "A statement of difference between two states. Used in the context of gap analysis, where the difference between the Baseline and Target Architecture is identified." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:note "Gap analysis is described in Part III, 27. Gap Analysis." ;
+    skos:prefLabel "Gap" .
+
+togafvoc:goal a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Goal ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "A high-level statement of intent or direction for an organization. Typically used to measure success of an organization." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Goal" .
+
+togafvoc:information_system_service a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:InformationSystemService ;
+    skos:broader togafvoc:application_architecture_component ;
+    skos:definition "The automated elements of a business service. An information system service may deliver or support part or all of one or more business services." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Information System Service" .
+
+togafvoc:location a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Location ;
+    skos:broader togafvoc:general_entity ;
+    skos:definition "A place where business activity takes place and can be hierarchically decomposed." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Location" .
+
+togafvoc:logical_application_component a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:LogicalApplicationComponent ;
+    skos:broader togafvoc:application_component ;
+    skos:definition "An encapsulation of application functionality that is independent of a particular implementation. For example, the classification of all purchase request processing applications implemented in an enterprise." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Logical Application Component" .
+
+togafvoc:logical_data_component a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:LogicalDataComponent ;
+    skos:broader togafvoc:data_architecture_component ;
+    skos:definition "A boundary zone that encapsulates related data entities to form a logical location to be held; for example, external procurement information." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Logical Data Component" .
+
+togafvoc:logical_technology_component a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:LogicalTechnologyComponent ;
+    skos:broader togafvoc:technology_component ;
+    skos:definition "An encapsulation of technology infrastructure that is independent of a particular product. A class of technology product; for example, supply chain management software as part of an Enterprise Resource Planning (ERP) suite, or a Commercial Off-The-Shelf (COTS) purchase request processing enterprise service." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Logical Technology Component" .
+
+togafvoc:measure a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Measure ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "An indicator or factor that can be tracked, usually on an ongoing basis, to determine success or alignment with objectives and goals." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Measure" .
+
+togafvoc:objective a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Objective ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "A time-bounded milestone for an organization used to demonstrate progress towards a goal; for example, \"Increase capacity utilization by 30% by the end of 2019 to support the planned increase in market share\"." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Objective" .
+
+togafvoc:organization_unit a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:OrganizationUnit ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "A self-contained unit of resources with goals, objectives, and measures. Organization units may include external parties and business partner organizations." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Organization Unit" .
+
+togafvoc:physical_application_component a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:PhysicalApplicationComponent ;
+    skos:broader togafvoc:application_component ;
+    skos:definition "An application, application module, application service, or other deployable component of functionality. For example, a configured and deployed instance of a Commercial Off-The-Shelf (COTS) Enterprise Resource Planning (ERP) supply chain management application." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Physical Application Component" .
+
+togafvoc:physical_data_component a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:PhysicalDataComponent ;
+    skos:broader togafvoc:data_architecture_component ;
+    skos:definition "A boundary zone that encapsulates related data entities to form a physical location to be held. For example, a purchase order business object, comprising purchase order header and item business object nodes." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Physical Data Component" .
+
+togafvoc:physical_technology_component a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:PhysicalTechnologyComponent ;
+    skos:broader togafvoc:technology_component ;
+    skos:definition "A specific technology infrastructure product or technology infrastructure product instance. For example, a particular product version of a Commercial Off-The-Shelf (COTS) solution, or a specific brand and version of server." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Physical Technology Component" .
+
+togafvoc:principle a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Principle ;
+    skos:broader togafvoc:general_entity ;
+    skos:definition "A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:note "A sample set of architecture principles is defined in Part III, 23. Architecture Principles." ;
+    skos:prefLabel "Principle" .
+
+togafvoc:process a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Process ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "A process represents flow of control between or within functions and/or services (depends on the granularity of definition). Processes represent a sequence of activities that together achieve a specified outcome, can be decomposed into sub-processes, and can show operation of a function or service (at next level of detail). Processes may also be used to link or compose organizations, functions, services, and processes." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Process" .
+
+togafvoc:product a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Product ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "Output generated by the business. The business product of the execution of a process." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Product" .
+
+togafvoc:requirement a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Requirement ;
+    skos:broader togafvoc:general_entity ;
+    skos:definition "A quantitative statement of business need that must be met by a particular architecture or work package." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Requirement" .
+
+togafvoc:service a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    skos:broader togafvoc:general_entity ;
+    skos:definition "An element of behavior that provides specific functionality in response to requests from actors or other services. A service delivers or supports business capabilities, has an explicitly defined interface, and is explicitly governed. Services are defined for business, information systems, and platforms." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:note "Is not a part of TOGAF 9.2 Figure 30-7: Relationships between Entities in the Full Metamodel" ;
+    skos:prefLabel "Service" .
+
+togafvoc:service_quality a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:ServiceQuality ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "A preset configuration of non-functional attributes that may be assigned to a service or service contract." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Service Quality" .
+
+togafvoc:technology_service a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:TechnologyService ;
+    skos:broader togafvoc:technology_architecture_component ;
+    skos:definition "A technical capability required to provide enabling infrastructure that supports the delivery of applications." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Technology Service" .
+
+togafvoc:value_stream a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:ValueStream ;
+    skos:broader togafvoc:general_entity ;
+    skos:definition "A representation of an end-to-end collection of value-adding activities that create an overall result for a customer, stakeholder, or end-user." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:note "Is not a part of TOGAF 9.2 Figure 30-7: Relationships between Entities in the Full Metamodel" ;
+    skos:prefLabel "Value Stream" .
+
+togafvoc:work_package a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:WorkPackage ;
+    skos:broader togafvoc:general_entity ;
+    skos:definition "A set of actions identified to achieve one or more objectives for the business. A work package can be a part of a project, a complete project, or a program." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Work Package" .
+
+togafvoc:actor a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Actor ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "A person, organization, or system that has a role that initiates or interacts with activities; for example, a sales representative who travels to visit customers. Actors may be internal or external to an organization. In the automotive industry, an original equipment manufacturer would be considered an actor by an automotive dealership that interacts with its supply chain activities." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Actor" ;
+    skos:related togafvoc:role .
+
+togafvoc:role a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:definedBy togaf:Role ;
+    skos:broader togafvoc:business_architecture_component ;
+    skos:definition "The usual or expected function of an actor, or the part somebody or something plays in a particular action or event. An actor may have a number of roles." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "Role" ;
+    skos:related togafvoc:actor .
+
+togafvoc:application_component a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    skos:broader togafvoc:application_architecture_component ;
+    skos:definition "An encapsulation of application functionality aligned to implementation structure. For example, a purchase request processing application." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:note "Is not a part of TOGAF 9.2 Figure 30-7: Relationships between Entities in the Full Metamodel" ;
+    skos:prefLabel "Application Component" .
+
+togafvoc:technology_component a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    skos:broader togafvoc:technology_architecture_component ;
+    skos:definition "An encapsulation of technology infrastructure that represents a class of technology product or specific technology product." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:note "Is not a part of TOGAF 9.2 Figure 30-7: Relationships between Entities in the Full Metamodel" ;
+    skos:prefLabel "Technology Component" .
+
+togafvoc:application_architecture_component a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap02.html> ;
+    rdfs:definedBy togaf:ApplicationArchitecture ;
+    skos:definition "A description of the structure and interaction of the applications as groups of capabilities that provide key business functions and manage the data assets." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:note "Application Architecture is described in Part II, 10. Phase C: Information Systems Architectures - Application Architecture." ;
+    skos:prefLabel "Application Architecture" ;
+    skos:topConceptOf togafvoc:scheme .
+
+togafvoc:technology_architecture_component a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap02.html> ;
+    rdfs:definedBy togaf:TechnologyArchitecture ;
+    skos:definition "A description of the structure and interaction of the technology services and technology components." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:note "Technology Architecture is described in Part II, 11. Phase D: Technology Architecture." ;
+    skos:prefLabel "Technology Architecture" ;
+    skos:topConceptOf togafvoc:scheme .
+
+togafvoc:data_architecture_component a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap02.html> ;
+    rdfs:definedBy togaf:DataArchitecture ;
+    skos:definition "A description of the structure and interaction of the enterprise's major types and sources of data, logical data assets, physical data assets, and data management resources." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:note "Data Architecture is described in Part II, 9. Phase C: Information Systems Architectures - Data Architecture." ;
+    skos:prefLabel "Data Architecture" ;
+    skos:topConceptOf togafvoc:scheme .
+
+togafvoc:general_entity a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    skos:inScheme togafvoc:scheme ;
+    skos:prefLabel "General Entity" ;
+    skos:topConceptOf togafvoc:scheme .
+
+togafvoc:business_architecture_component a skos:Concept ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap02.html> ;
+    rdfs:definedBy togaf:BusinessArchitecture ;
+    skos:definition "A representation of holistic, multi-dimensional business views of: capabilities, end-to-end value delivery, information, and organizational structure; and the relationships among these business views and strategies, products, policies, initiatives, and stakeholders." ;
+    skos:inScheme togafvoc:scheme ;
+    skos:note "Business Architecture relates business elements to business goals and elements of other domains. Business Architecture is described in Part II, 7. Phase B: Business Architecture." ;
+    skos:prefLabel "Business Architecture" ;
+    skos:topConceptOf togafvoc:scheme .
+
+togafvoc:scheme a skos:ConceptScheme ;
+    rdfs:label "TOGAF 9.2 Content Metamodel Vocabulary" ;
+    dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    rdfs:comment "This is SKOS vocabulary version of the TOGAF Content Metamodel ontology. It is based on the TOGAF 9.2 Content Metamodel Ontology." ;
+    skos:hasTopConcept togafvoc:application_architecture_component,
+        togafvoc:business_architecture_component,
+        togafvoc:data_architecture_component,
+        togafvoc:general_entity,
+        togafvoc:technology_architecture_component ;
+    skos:prefLabel "TOGAF 9.2 Content Metamodel Vocabulary" .
+
