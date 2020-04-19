@@ -13,7 +13,7 @@ This is version 2.0 of the TOGAF Content Metamodel ontology. It is based on the 
  1. Fixes inconsistent property naming in TOGAF 9.2 section 30.7 to create `togaf:informationSystemServiceIsUsedByDataEntity`, `togaf:logicalApplicationComponentIsUsedByLogicalDataComponent` and `togaf:physicalApplicationComponentIsUsedByPhysicalDataComponent` to improve usability of the ontology.
  1. Fixed inconsistent property naming for `Business Capability` in TOGAF 9.2 by using `togaf:businessCapabilityIsUsedByOrganizationUnit`
  1. Removes duplicate `togaf:logicalTechnologyComponentServesLogicalApplicationComponent` found in TOGAF 9.2 section 30.7.
- 1. Adds `category` property with domain of `togaf:ContentClassification` and no range specified to improve usability. Although linking to SKOS `Concept` is preferred, there are no limitations as to what resource can be used to specify the category of an entity.
+ 1. Adds `hasCategory` property with no domain or range specified. Updates restrictions on `togaf:ArchitectureComponent` and `togaf:AssociationObjects`. Although linking to `skos:Concept` is preferred, there are no limitations as to what resource can be used to specify the category of an entity. 
 
 ## Ontology Versioning Choices
 
@@ -37,7 +37,7 @@ Taxonomy mapping and transformation is based on [MoneyAggVoc](https://cadmiumkit
 
 Ontology can be viewed in [TopBraid EDG](https://www.topquadrant.com/products/topbraid-enterprise-data-governance/) and [WebProtege](https://webprotege.stanford.edu) once you create an account.
 
- 1. [TOGAF 9.2 Content Metamodel Ontology](https://webprotege.stanford.edu/#projects/23caff5b-4f1a-48fd-a28a-b4e33770a8cb/edit/Classes)
+ 1. [TOGAF 9.2 Content Metamodel Ontology](https://webprotege.stanford.edu/#projects/19c1bc49-89f9-44ec-9a0f-a486f7aa7e8c/edit/Classes)
  1. [TOGAF 9.1 Content Metamodel Ontology](https://webprotege.stanford.edu/#projects/bb40a6e0-2f3d-46a1-bffb-6a84db5ce7df/edit/Classes)
 
 Taxonomy import and visualization has been tested with [VocBench 3](http://vocbench.uniroma2.it/) and [TopBraid EDG](https://www.topquadrant.com/products/topbraid-enterprise-data-governance/).
