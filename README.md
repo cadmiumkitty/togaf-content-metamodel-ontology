@@ -25,7 +25,7 @@ Both JSON-LD and Turtle serializations are provided out of the box to improve ad
 
 ## Prior Work
 
-Original from https://sites.google.com/site/ontologyprojects/home/togaf-core-content-metamodel is used with permission from Aurona Gerber. Subsequent modifications are released with Creative Commons Attribution-ShareAlike 4.0 International license.
+Original from https://sites.google.com/site/ontologyprojects/home/togaf-core-content-metamodel is used with permission from Aurona Gerber.
 
 Based on the paper [Towards the Formalisation of the TOGAF Content Metamodel using Ontologies](https://www.researchgate.net/publication/220708864_Towards_the_Formalisation_of_the_TOGAF_Content_Metamodel_using_Ontologies) by Aurona Gerber, Paula Kotze and Alta van der Merwe which is using [TOGAF 9.1 Content Metamodel](https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html).
 
