@@ -1411,6 +1411,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalApplicationComponent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A description of the structure and interaction of the applications as groups of capabilities that provide key business functions and manage the data assets.</rdfs:comment>
+        <rdfs:label>Application Architecture</rdfs:label>
     </owl:Class>
     
 
@@ -1419,6 +1421,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ApplicationArchitectureComponent">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent"/>
+        <rdfs:comment>Information Systems Architecture entities capture architecture models of IT systems, looking at applications and data in line with the TOGAF ADM phases.</rdfs:comment>
+        <rdfs:label>Application Architecture Component</rdfs:label>
     </owl:Class>
     
 
@@ -1433,6 +1437,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent"/>
+        <rdfs:comment>The fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution. The structure of components, their inter-relationships, and the principles and guidelines governing their design and evolution over time.</rdfs:comment>
+        <rdfs:label>Architecture</rdfs:label>
     </owl:Class>
     
 
@@ -1452,6 +1458,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Components of Business, Information Systems and Technology Architecture.</rdfs:comment>
+        <rdfs:label>Architecture Component</rdfs:label>
     </owl:Class>
     
 
@@ -1473,6 +1481,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Association Objects are intended to capture the surrounding context of formal architecture models, including general Architecture Principles, strategic context that forms input for architecture modeling, and requirements generated from the architecture.</rdfs:comment>
+        <rdfs:label>Association Objects</rdfs:label>
     </owl:Class>
     
 
@@ -1609,6 +1619,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ValueStream"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A representation of holistic, multi-dimensional business views of: capabilities, end-to-end value delivery, information, and organizational structure; and the relationships among these business views and strategies, products, policies, initiatives, and stakeholders.</rdfs:comment>
+        <rdfs:label>Business Architecture</rdfs:label>
     </owl:Class>
     
 
@@ -1617,6 +1629,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#BusinessArchitectureComponent">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent"/>
+        <rdfs:comment>Business Architecture entities capture architectural models of business operation, looking specifically at factors that motivate the enterprise, how the enterprise is organizationally structured, and also what business capabilities the enterprise has.</rdfs:comment>
+        <rdfs:label>Business Architecture Component</rdfs:label>
     </owl:Class>
     
 
@@ -1810,7 +1824,10 @@
 
     <!-- http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification">
+        <rdfs:comment>The core TOGAF content metamodel and its extensions.</rdfs:comment>
+        <rdfs:label>Content Classification</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1858,6 +1875,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#CoreContent">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+        <rdfs:comment>The core metamodel provides a minimum set of architectural content to support traceability across artifacts. Additional metamodel concepts to support more specific or more in-depth modeling are contained within a group of extensions that logically cluster extension catalogs, matrices, and diagrams, allowing focus in areas of specific interest and focus.</rdfs:comment>
+        <rdfs:label>Core Content</rdfs:label>
     </owl:Class>
     
 
@@ -1929,6 +1948,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#PhysicalDataComponent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A description of the structure and interaction of the enterprise&apos;s major types and sources of data, logical data assets, physical data assets, and data management resources.</rdfs:comment>
+        <rdfs:label>Data Architecture</rdfs:label>
     </owl:Class>
     
 
@@ -1937,6 +1958,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataArchitectureComponent">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent"/>
+        <rdfs:comment>Information Systems Architecture entities capture architecture models of IT systems, looking at applications and data in line with the TOGAF ADM phases.</rdfs:comment>
+        <rdfs:label>Data Architecture Component</rdfs:label>
     </owl:Class>
     
 
@@ -1998,6 +2021,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#DataModelingExtension">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+        <rdfs:comment>The data extension is intended to allow more sophisticated modeling and the encapsulation of data. The core model provides a data entity concept which supports the creation of data models, which is then extended by this extension to include the concept of a data component. Data components form a logical or physical encapsulation of abstract data entities into units that can be governed and deployed into applications.</rdfs:comment>
+        <rdfs:label>Data Modeling Extension</rdfs:label>
     </owl:Class>
     
 
@@ -2186,6 +2211,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#GovernanceExtension">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+        <rdfs:comment>The governance extension is intended to allow additional structured data to be held against objectives and business services, supporting operational governance of the landscape.</rdfs:comment>
+        <rdfs:label>Governance Extension</rdfs:label>
     </owl:Class>
     
 
@@ -2229,6 +2256,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#InfrastructureConsolidationExtension">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+        <rdfs:comment>The infrastructure consolidation extension is intended to be used in landscapes where the application and technology portfolios have become fragmented and the architecture seeks to consolidate the business as usual capability into a smaller number of locations, applications, or technology components.</rdfs:comment>
+        <rdfs:label>Infrastructure Consolidation Extension</rdfs:label>
     </owl:Class>
     
 
@@ -2423,6 +2452,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#MotivationExtension">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+        <rdfs:comment>The motivation extension is intended to allow additional structured modeling of the drivers, goals, and objectives that influence an organization to provide business services to its customers. This in turn allows more effective definition of service contracts and better measurement of business performance.</rdfs:comment>
+        <rdfs:label>Motivation Extension</rdfs:label>
     </owl:Class>
     
 
@@ -2741,6 +2772,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ProcessModelingExtension">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+        <rdfs:comment>The process modeling extension is intended to allow detailed modeling of process flows by adding events, products, and controls to the metamodel. Typically, Enterprise Architecture does not drill into process flow, but in certain process-centric or event-centric organizations it may be necessary to elaborate process in a much more formal manner using this extension module.</rdfs:comment>
+        <rdfs:label>Process Modeling Extension</rdfs:label>
     </owl:Class>
     
 
@@ -2840,6 +2873,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ServicesExtension">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ContentClassification"/>
+        <rdfs:comment>The services extension is intended to allow more sophisticated modeling of the service portfolio by creating a concept of Information System (IS) services in addition to the core concept of business services. IS services are directly supported by applications and creating the layer of abstraction relaxes the constraints on business services while simultaneously allowing technical stakeholders to put more formality into an IS service catalog.</rdfs:comment>
+        <rdfs:label>Services Extension</rdfs:label>
     </owl:Class>
     
 
@@ -2876,6 +2911,8 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyService"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A description of the structure and interaction of the technology services and technology components.</rdfs:comment>
+        <rdfs:label>Technology Architecture</rdfs:label>
     </owl:Class>
     
 
@@ -2884,6 +2921,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#TechnologyArchitectureComponent">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#ArchitectureComponent"/>
+        <rdfs:comment>Technology Architecture entities capture procured technology assets that are used to implement and realize information system solutions.</rdfs:comment>
+        <rdfs:label>Technology Architecture Component</rdfs:label>
     </owl:Class>
     
 

@@ -37,7 +37,7 @@ Taxonomy mapping and transformation is based on [MoneyAggVoc](https://cadmiumkit
 
 Ontology can be viewed in [TopBraid EDG](https://www.topquadrant.com/products/topbraid-enterprise-data-governance/) and [WebProtege](https://webprotege.stanford.edu) once you create an account.
 
- 1. [TOGAF 9.2 Content Metamodel Ontology](https://webprotege.stanford.edu/#projects/19c1bc49-89f9-44ec-9a0f-a486f7aa7e8c/edit/Classes)
+ 1. [TOGAF 9.2 Content Metamodel Ontology](https://webprotege.stanford.edu/#projects/0822e02f-b284-4c2d-a031-3973f1f5ded8/edit/Classes)
  1. [TOGAF 9.1 Content Metamodel Ontology](https://webprotege.stanford.edu/#projects/bb40a6e0-2f3d-46a1-bffb-6a84db5ce7df/edit/Classes)
 
 Taxonomy import and visualization have been tested with [VocBench 3](http://vocbench.uniroma2.it/) and [TopBraid EDG](https://www.topquadrant.com/products/topbraid-enterprise-data-governance/).
