@@ -1,0 +1,4 @@
+pandas
+rdfpandas
+rdflib
+rdflib-jsonld
