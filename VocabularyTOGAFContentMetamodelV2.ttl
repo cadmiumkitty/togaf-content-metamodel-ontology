@@ -1,12 +1,9 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix pav: <http://purl.org/pav/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix togaf: <http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl#> .
 @prefix togafvoc: <http://www.semanticweb.org/ontologies/2020/4/VocabularyTOGAFContentMetamodel.skos#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 togafvoc:assumption a skos:Concept ;
     dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
@@ -362,6 +359,7 @@ togafvoc:business_architecture_component a skos:Concept ;
 togafvoc:scheme a skos:ConceptScheme ;
     rdfs:label "TOGAF 9.2 Content Metamodel Vocabulary" ;
     dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
+    pav:version "2.0.0" ;
     rdfs:comment "This is SKOS vocabulary version of the TOGAF Content Metamodel ontology. It is based on the TOGAF 9.2 Content Metamodel Ontology." ;
     skos:hasTopConcept togafvoc:application_architecture_component,
         togafvoc:business_architecture_component,

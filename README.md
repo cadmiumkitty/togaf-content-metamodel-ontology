@@ -1,6 +1,6 @@
 # TOGAF Content Metamodel Ontology
 
-This is version 2.0 of the TOGAF Content Metamodel ontology. It is based on the Content Metamodel of the TOGAF Version 9.2 standard. See [TOGAF 9.2 Content Metamodel](https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap30.html) for the complete set of entities, attributes and relationships.
+This is version 2.0.0 of the TOGAF Content Metamodel ontology. It is based on the Content Metamodel of the TOGAF Version 9.2 standard. See [TOGAF 9.2 Content Metamodel](https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap30.html) for the complete set of entities, attributes and relationships.
 
 ## Changes in version 2 of the ontology
 
@@ -40,8 +40,6 @@ Ontology can be viewed in [TopBraid EDG](https://www.topquadrant.com/products/to
  1. [TOGAF 9.2 Content Metamodel Ontology](https://webprotege.stanford.edu/#projects/0822e02f-b284-4c2d-a031-3973f1f5ded8/edit/Classes)
  1. [TOGAF 9.1 Content Metamodel Ontology](https://webprotege.stanford.edu/#projects/bb40a6e0-2f3d-46a1-bffb-6a84db5ce7df/edit/Classes)
 
-Taxonomy import and visualization have been tested with [VocBench 3](http://vocbench.uniroma2.it/) and [TopBraid EDG](https://www.topquadrant.com/products/topbraid-enterprise-data-governance/).
+Taxonomy import and visualization have been tested with [VocBench 3](http://vocbench.uniroma2.it/) and [TopBraid EDG](https://www.topquadrant.com/products/topbraid-enterprise-data-governance/). For more tools see [Software for Controlled Vocabularies](https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies) list maintained by [BARTOC](https://bartoc.org/).
 
-## Immediate Next Steps
-
-Add [Semantic MediaWiki](https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki) mappings to the repository.
+![TOGAF Vocabulary in VocBench 3](togaf-vocbench3.png "TOGAF Vocabulary in VocBench 3")
