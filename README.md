@@ -42,4 +42,8 @@ Ontology can be viewed in [TopBraid EDG](https://www.topquadrant.com/products/to
 
 Taxonomy import and visualization have been tested with [VocBench 3](http://vocbench.uniroma2.it/) and [TopBraid EDG](https://www.topquadrant.com/products/topbraid-enterprise-data-governance/). For more tools see [Software for Controlled Vocabularies](https://github.com/gbv/bartoc.org/wiki/Software-for-controlled-vocabularies) list maintained by [BARTOC](https://bartoc.org/).
 
-![TOGAF Vocabulary in VocBench 3](togaf-vocbench3.png "TOGAF Vocabulary in VocBench 3")
+![TOGAF Vocabulary in VocBench](togaf-vocbench.png "TOGAF Vocabulary in VocBench")
+
+Use it with [Confluence](https://www.atlassian.com/software/confluence) to annotate Confluence pages and use Confluence as an architecture repository.
+
+![TOGAF in Confluence Semantics](togaf-confluence.png "TOGAF in Confluence Semantics")
