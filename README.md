@@ -44,6 +44,6 @@ Taxonomy import and visualization have been tested with [VocBench 3](http://vocb
 
 ![TOGAF Vocabulary in VocBench](togaf-vocbench.png "TOGAF Vocabulary in VocBench")
 
-Use it with [Confluence](https://www.atlassian.com/software/confluence) to annotate Confluence pages and use Confluence as an architecture repository.
+[Taxonomies for Confluence](https://dalstonsemantics.com/services/taxonomies-for-confluence/) can be used to index [Confluence](https://www.atlassian.com/software/confluence) pages and use Confluence as an architecture repository.
 
-![TOGAF in Confluence Semantics](togaf-confluence.png "TOGAF in Confluence Semantics")
+![TOGAF Vocabulary in Taxonomies for Confluence](togaf-confluence.png "TOGAF Vocabulary in Taxonomies for Confluence")
