@@ -1,4 +1,4 @@
-# TOGAF Content Metamodel Ontology
+# TOGAF® Content Metamodel Ontology
 
 This is version 2.0.0 of the TOGAF Content Metamodel ontology. It is based on the Content Metamodel of the TOGAF Version 9.2 standard. See [TOGAF 9.2 Content Metamodel](https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap30.html) for the complete set of entities, attributes and relationships.
 
@@ -47,3 +47,7 @@ Taxonomy import and visualization have been tested with [VocBench 3](http://vocb
 [Taxonomies for Confluence](https://dalstonsemantics.com/services/taxonomies-for-confluence/) can be used to index [Confluence](https://www.atlassian.com/software/confluence) pages and use Confluence as an architecture repository.
 
 ![TOGAF Vocabulary in Taxonomies for Confluence](togaf-confluence.png "TOGAF Vocabulary in Taxonomies for Confluence")
+
+## Trademarks
+
+TOGAF is a registered trademark of The Open Group.
