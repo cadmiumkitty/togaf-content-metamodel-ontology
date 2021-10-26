@@ -11,7 +11,7 @@
 
 <http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl> rdf:type owl:Ontology ;
                                                                                   owl:priorVersion <http://www.semanticweb.org/ontologies/2010/0/OntologyTOGAFContentMetamodel.owl> ;
-                                                                                  owl:versionInfo "This is version 2.0 of the TOGAF Content Metamodel ontology. It is based on the Content Metamodel of the TOGAF Version 9.2 standard. See https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap30.html for the complete set of entities, attributes and relationships."@en .
+                                                                                  owl:versionInfo "This is version 2.0 of the TOGAF® Content Metamodel ontology. It is based on the Content Metamodel of the TOGAF Version 9.2 standard. See https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap30.html for the complete set of entities, attributes and relationships."@en .
 
 #################################################################
 #    Object Properties

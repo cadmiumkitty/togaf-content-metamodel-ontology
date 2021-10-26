@@ -11,7 +11,7 @@
      xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2020/4/OntologyTOGAFContentMetamodel.owl">
         <owl:priorVersion rdf:resource="http://www.semanticweb.org/ontologies/2010/0/OntologyTOGAFContentMetamodel.owl"/>
-        <owl:versionInfo xml:lang="en">This is version 2.0 of the TOGAF Content Metamodel ontology. It is based on the Content Metamodel of the TOGAF Version 9.2 standard. See https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap30.html for the complete set of entities, attributes and relationships.</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">This is version 2.0 of the TOGAF® Content Metamodel ontology. It is based on the Content Metamodel of the TOGAF Version 9.2 standard. See https://pubs.opengroup.org/architecture/togaf9-doc/arch/chap30.html for the complete set of entities, attributes and relationships.</owl:versionInfo>
     </owl:Ontology>
     
 

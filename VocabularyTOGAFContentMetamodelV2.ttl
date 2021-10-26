@@ -357,7 +357,7 @@ togafvoc:business_architecture_component a skos:Concept ;
     skos:topConceptOf togafvoc:scheme .
 
 togafvoc:scheme a skos:ConceptScheme ;
-    rdfs:label "TOGAF 9.2 Content Metamodel Vocabulary" ;
+    rdfs:label "TOGAF® 9.2 Content Metamodel Vocabulary" ;
     dcterms:source <https://pubs.opengroup.org/architecture/togaf91-doc/arch/chap34.html> ;
     pav:version "2.0.0" ;
     rdfs:comment "This is SKOS vocabulary version of the TOGAF Content Metamodel ontology. It is based on the TOGAF 9.2 Content Metamodel Ontology." ;
@@ -366,5 +366,5 @@ togafvoc:scheme a skos:ConceptScheme ;
         togafvoc:data_architecture_component,
         togafvoc:general_entity,
         togafvoc:technology_architecture_component ;
-    skos:prefLabel "TOGAF 9.2 Content Metamodel Vocabulary" .
+    skos:prefLabel "TOGAF® 9.2 Content Metamodel Vocabulary" .
 
